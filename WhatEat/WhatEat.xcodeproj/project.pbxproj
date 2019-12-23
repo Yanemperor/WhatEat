@@ -54,6 +54,8 @@
 		35A69BBF23B09A1E00E0ECBB /* ZLCircularItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BBE23B09A1E00E0ECBB /* ZLCircularItemModel.swift */; };
 		35A69BC123B0A06200E0ECBB /* ZLCircularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC023B0A06200E0ECBB /* ZLCircularViewModel.swift */; };
 		35A69BC323B0AC9700E0ECBB /* ZLResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC223B0AC9700E0ECBB /* ZLResultView.swift */; };
+		35A69BC523B0B7DE00E0ECBB /* ZLItemHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC423B0B7DE00E0ECBB /* ZLItemHeadView.swift */; };
+		35A69BC723B0B9C400E0ECBB /* ZLItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC623B0B9C400E0ECBB /* ZLItemViewModel.swift */; };
 		D4657365ECD36517C46D2810 /* Pods_WhatEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2AB02AB8B304F882620506 /* Pods_WhatEat.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +130,8 @@
 		35A69BBE23B09A1E00E0ECBB /* ZLCircularItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLCircularItemModel.swift; sourceTree = "<group>"; };
 		35A69BC023B0A06200E0ECBB /* ZLCircularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLCircularViewModel.swift; sourceTree = "<group>"; };
 		35A69BC223B0AC9700E0ECBB /* ZLResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLResultView.swift; sourceTree = "<group>"; };
+		35A69BC423B0B7DE00E0ECBB /* ZLItemHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemHeadView.swift; sourceTree = "<group>"; };
+		35A69BC623B0B9C400E0ECBB /* ZLItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemViewModel.swift; sourceTree = "<group>"; };
 		75A42F2320C44323D7DA3F28 /* Pods-WhatEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatEat.release.xcconfig"; path = "Target Support Files/Pods-WhatEat/Pods-WhatEat.release.xcconfig"; sourceTree = "<group>"; };
 		7A2AB02AB8B304F882620506 /* Pods_WhatEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C188630B4174F3D2B1D5A655 /* Pods-WhatEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatEat.debug.xcconfig"; path = "Target Support Files/Pods-WhatEat/Pods-WhatEat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -529,6 +533,7 @@
 		35A69BAF23B0926600E0ECBB /* ZLViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				35A69BC623B0B9C400E0ECBB /* ZLItemViewModel.swift */,
 			);
 			path = ZLViewModel;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 		35A69BB023B0926600E0ECBB /* ZLView */ = {
 			isa = PBXGroup;
 			children = (
+				35A69BC423B0B7DE00E0ECBB /* ZLItemHeadView.swift */,
 			);
 			path = ZLView;
 			sourceTree = "<group>";
@@ -795,6 +801,7 @@
 				35467E5023A8A56700A34717 /* AppDelegate.swift in Sources */,
 				35467EC323A8A67600A34717 /* ZLUniversal.swift in Sources */,
 				35467EDE23A8A84C00A34717 /* ZLHomeViewController.swift in Sources */,
+				35A69BC523B0B7DE00E0ECBB /* ZLItemHeadView.swift in Sources */,
 				35467ED023A8A67600A34717 /* ZLBaseNavigationController.swift in Sources */,
 				35467EC723A8A67600A34717 /* ZLInterstitial.swift in Sources */,
 				35467EC623A8A67600A34717 /* ZLConfigKey.swift in Sources */,
@@ -804,6 +811,7 @@
 				35A69BBB23B092A100E0ECBB /* ZLItemViewController.swift in Sources */,
 				35467EE123A8ADFB00A34717 /* ZLAwardView.swift in Sources */,
 				35467EC423A8A67600A34717 /* ZLTableKey.swift in Sources */,
+				35A69BC723B0B9C400E0ECBB /* ZLItemViewModel.swift in Sources */,
 				35467EC023A8A67600A34717 /* ZLVersionUpdate.swift in Sources */,
 				35467ED423A8A67600A34717 /* ZLBaseModel.swift in Sources */,
 			);

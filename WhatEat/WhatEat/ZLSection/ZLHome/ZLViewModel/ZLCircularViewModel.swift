@@ -12,18 +12,19 @@ class ZLCircularViewModel: ZLBaseViewModel {
     typealias ReloadBlock = () -> ()
     var reloadBlock: ReloadBlock?
 
-    
     var circularModel: ZLCircularModel?
     var itemTitle: Array<String> = ["火锅","炒菜","饺子","炒饭","粥","面条"]
+    
     
     func getCircular() {
         let temp: Array<ZLCircularModel> = ZLDataBase.shared.getCircularTable() ?? []
         if temp.count > 0 {
-            
+            circularModel = temp[0]
         }else{
             circularModel = getInitCircularModel()
-            reload()
+            ZLDataBase.shared.insertPoliticalTable(array: [circularModel!])
         }
+        reload()
     }
     
     func getInitCircularModel() -> ZLCircularModel {

@@ -35,9 +35,21 @@ class ZLHomeViewController: ZLBaseViewController {
             let vc = ZLSetViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
+        view.addSubview(titleView)
+        titleView.addSubview(titleLabel)
         view.addSubview(circularView)
         view.addSubview(leftBtn)
         view.addSubview(rightBtn)
+        titleView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(autoSize(number: 20))
+            make.centerX.equalToSuperview()
+            make.height.equalTo(autoSize(number: 30))
+        }
+        titleLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(autoSize(number: 15))
+            make.right.equalToSuperview().offset(autoSize(number: -15))
+            make.centerY.equalToSuperview()
+        }
         leftBtn.snp.makeConstraints { (make) in
             make.size.equalTo(CGSize(width: autoSize(number: 60), height: autoSize(number: 30)))
             make.top.equalTo(circularView.snp.bottom).offset(autoSize(number: 100))
@@ -51,6 +63,23 @@ class ZLHomeViewController: ZLBaseViewController {
         
         UIApplication.shared.keyWindow?.addSubview(resultView)
     }
+    
+    lazy var titleView: UIView = {
+        let temp = UIView()
+        temp.backgroundColor = color_ebebeb
+        temp.layer.cornerRadius = autoSize(number: 30 / 2.0)
+        temp.layer.masksToBounds = true
+        return temp
+    }()
+    
+    lazy var titleLabel: UILabel = {
+        let temp = UILabel()
+        temp.text = vm.circularModel?.title
+        temp.textColor = color_333333
+        temp.textAlignment = .center
+        temp.font = autoFont(font: 18)
+        return temp
+    }()
     
     lazy var circularView: ZLCircularView = {
         let temp = ZLCircularView()
@@ -76,6 +105,7 @@ class ZLHomeViewController: ZLBaseViewController {
         temp.layer.borderColor = color_333333.cgColor
         temp.rx.controlEvent(.touchUpInside).subscribe { (button) in
             let vc = ZLItemViewController()
+            vc.model = self.vm.circularModel
             self.navigationController?.pushViewController(vc, animated: true)
         }.disposed(by: disposeBag)
         return temp
