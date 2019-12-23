@@ -1,0 +1,1143 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35467E5023A8A56700A34717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E4F23A8A56700A34717 /* AppDelegate.swift */; };
+		35467E5223A8A56700A34717 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E5123A8A56700A34717 /* ViewController.swift */; };
+		35467E5523A8A56700A34717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35467E5323A8A56700A34717 /* Main.storyboard */; };
+		35467E5723A8A56800A34717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35467E5623A8A56800A34717 /* Assets.xcassets */; };
+		35467E5A23A8A56800A34717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35467E5823A8A56800A34717 /* LaunchScreen.storyboard */; };
+		35467E6523A8A56800A34717 /* WhatEatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E6423A8A56800A34717 /* WhatEatTests.swift */; };
+		35467E7023A8A56800A34717 /* WhatEatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E6F23A8A56800A34717 /* WhatEatUITests.swift */; };
+		35467EB623A8A67600A34717 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E7E23A8A67600A34717 /* UIColor+Extension.swift */; };
+		35467EB723A8A67600A34717 /* NSObject+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E7F23A8A67600A34717 /* NSObject+UIViewController.swift */; };
+		35467EB823A8A67600A34717 /* UIView+ZLAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E8023A8A67600A34717 /* UIView+ZLAdd.swift */; };
+		35467EB923A8A67600A34717 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E8123A8A67600A34717 /* String+Extension.swift */; };
+		35467EBA23A8A67600A34717 /* UIApplication+ZLAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E8223A8A67600A34717 /* UIApplication+ZLAdd.swift */; };
+		35467EBB23A8A67600A34717 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E8323A8A67600A34717 /* UIScrollView+Extension.swift */; };
+		35467EBC23A8A67600A34717 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E8423A8A67600A34717 /* Array+Extension.swift */; };
+		35467EBD23A8A67600A34717 /* ZLGlobalTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E8E23A8A67600A34717 /* ZLGlobalTimer.swift */; };
+		35467EBE23A8A67600A34717 /* ZLJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E9023A8A67600A34717 /* ZLJSONParser.swift */; };
+		35467EBF23A8A67600A34717 /* ZLUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E9223A8A67600A34717 /* ZLUserInfo.swift */; };
+		35467EC023A8A67600A34717 /* ZLVersionUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E9523A8A67600A34717 /* ZLVersionUpdate.swift */; };
+		35467EC123A8A67600A34717 /* ZLNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E9723A8A67600A34717 /* ZLNotification.swift */; };
+		35467EC223A8A67600A34717 /* ZLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E9823A8A67600A34717 /* ZLColor.swift */; };
+		35467EC323A8A67600A34717 /* ZLUniversal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E9923A8A67600A34717 /* ZLUniversal.swift */; };
+		35467EC423A8A67600A34717 /* ZLTableKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E9A23A8A67600A34717 /* ZLTableKey.swift */; };
+		35467EC523A8A67600A34717 /* ZLEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E9B23A8A67600A34717 /* ZLEnums.swift */; };
+		35467EC623A8A67600A34717 /* ZLConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E9C23A8A67600A34717 /* ZLConfigKey.swift */; };
+		35467EC723A8A67600A34717 /* ZLInterstitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467E9F23A8A67600A34717 /* ZLInterstitial.swift */; };
+		35467EC823A8A67600A34717 /* ZLBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EA023A8A67600A34717 /* ZLBannerView.swift */; };
+		35467EC923A8A67600A34717 /* ZLHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EA223A8A67600A34717 /* ZLHUD.swift */; };
+		35467ECA23A8A67600A34717 /* ZLDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EA423A8A67600A34717 /* ZLDataBase.swift */; };
+		35467ED023A8A67600A34717 /* ZLBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EAC23A8A67600A34717 /* ZLBaseNavigationController.swift */; };
+		35467ED123A8A67600A34717 /* ZLBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EAD23A8A67600A34717 /* ZLBaseTableViewController.swift */; };
+		35467ED223A8A67600A34717 /* ZLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EAE23A8A67600A34717 /* ZLBaseViewController.swift */; };
+		35467ED323A8A67600A34717 /* ZLBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EAF23A8A67600A34717 /* ZLBaseTabBarController.swift */; };
+		35467ED423A8A67600A34717 /* ZLBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EB123A8A67600A34717 /* ZLBaseModel.swift */; };
+		35467ED523A8A67600A34717 /* ZLBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EB323A8A67600A34717 /* ZLBaseViewModel.swift */; };
+		35467ED623A8A67600A34717 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EB523A8A67600A34717 /* BaseTableViewCell.swift */; };
+		35467EDE23A8A84C00A34717 /* ZLHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EDD23A8A84C00A34717 /* ZLHomeViewController.swift */; };
+		35467EE123A8ADFB00A34717 /* ZLAwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EE023A8ADFB00A34717 /* ZLAwardView.swift */; };
+		35467EE323A8AE9300A34717 /* ZLTextArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EE223A8AE9300A34717 /* ZLTextArcView.swift */; };
+		35467EE523A8AF6400A34717 /* ZLRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EE423A8AF6400A34717 /* ZLRewardView.swift */; };
+		35467EE723AB4C9000A34717 /* ZLCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EE623AB4C9000A34717 /* ZLCircularView.swift */; };
+		35A69BB723B0928600E0ECBB /* ZLSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BB623B0928600E0ECBB /* ZLSetViewController.swift */; };
+		35A69BB923B0929500E0ECBB /* ZLOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BB823B0929500E0ECBB /* ZLOtherViewController.swift */; };
+		35A69BBB23B092A100E0ECBB /* ZLItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BBA23B092A100E0ECBB /* ZLItemViewController.swift */; };
+		35A69BBD23B099A600E0ECBB /* ZLCircularModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BBC23B099A600E0ECBB /* ZLCircularModel.swift */; };
+		35A69BBF23B09A1E00E0ECBB /* ZLCircularItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BBE23B09A1E00E0ECBB /* ZLCircularItemModel.swift */; };
+		35A69BC123B0A06200E0ECBB /* ZLCircularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC023B0A06200E0ECBB /* ZLCircularViewModel.swift */; };
+		35A69BC323B0AC9700E0ECBB /* ZLResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC223B0AC9700E0ECBB /* ZLResultView.swift */; };
+		D4657365ECD36517C46D2810 /* Pods_WhatEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2AB02AB8B304F882620506 /* Pods_WhatEat.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35467E6123A8A56800A34717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35467E4423A8A56700A34717 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35467E4B23A8A56700A34717;
+			remoteInfo = WhatEat;
+		};
+		35467E6C23A8A56800A34717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35467E4423A8A56700A34717 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35467E4B23A8A56700A34717;
+			remoteInfo = WhatEat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35467E4C23A8A56700A34717 /* WhatEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35467E4F23A8A56700A34717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		35467E5123A8A56700A34717 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		35467E5423A8A56700A34717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35467E5623A8A56800A34717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35467E5923A8A56800A34717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		35467E5B23A8A56800A34717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35467E6023A8A56800A34717 /* WhatEatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatEatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35467E6423A8A56800A34717 /* WhatEatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatEatTests.swift; sourceTree = "<group>"; };
+		35467E6623A8A56800A34717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35467E6B23A8A56800A34717 /* WhatEatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatEatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35467E6F23A8A56800A34717 /* WhatEatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatEatUITests.swift; sourceTree = "<group>"; };
+		35467E7123A8A56900A34717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35467E7E23A8A67600A34717 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		35467E7F23A8A67600A34717 /* NSObject+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+UIViewController.swift"; sourceTree = "<group>"; };
+		35467E8023A8A67600A34717 /* UIView+ZLAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ZLAdd.swift"; sourceTree = "<group>"; };
+		35467E8123A8A67600A34717 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		35467E8223A8A67600A34717 /* UIApplication+ZLAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+ZLAdd.swift"; sourceTree = "<group>"; };
+		35467E8323A8A67600A34717 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		35467E8423A8A67600A34717 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		35467E8E23A8A67600A34717 /* ZLGlobalTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLGlobalTimer.swift; sourceTree = "<group>"; };
+		35467E9023A8A67600A34717 /* ZLJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLJSONParser.swift; sourceTree = "<group>"; };
+		35467E9223A8A67600A34717 /* ZLUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLUserInfo.swift; sourceTree = "<group>"; };
+		35467E9523A8A67600A34717 /* ZLVersionUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLVersionUpdate.swift; sourceTree = "<group>"; };
+		35467E9723A8A67600A34717 /* ZLNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLNotification.swift; sourceTree = "<group>"; };
+		35467E9823A8A67600A34717 /* ZLColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLColor.swift; sourceTree = "<group>"; };
+		35467E9923A8A67600A34717 /* ZLUniversal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLUniversal.swift; sourceTree = "<group>"; };
+		35467E9A23A8A67600A34717 /* ZLTableKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLTableKey.swift; sourceTree = "<group>"; };
+		35467E9B23A8A67600A34717 /* ZLEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLEnums.swift; sourceTree = "<group>"; };
+		35467E9C23A8A67600A34717 /* ZLConfigKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLConfigKey.swift; sourceTree = "<group>"; };
+		35467E9F23A8A67600A34717 /* ZLInterstitial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLInterstitial.swift; sourceTree = "<group>"; };
+		35467EA023A8A67600A34717 /* ZLBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBannerView.swift; sourceTree = "<group>"; };
+		35467EA223A8A67600A34717 /* ZLHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLHUD.swift; sourceTree = "<group>"; };
+		35467EA423A8A67600A34717 /* ZLDataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLDataBase.swift; sourceTree = "<group>"; };
+		35467EAC23A8A67600A34717 /* ZLBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBaseNavigationController.swift; sourceTree = "<group>"; };
+		35467EAD23A8A67600A34717 /* ZLBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBaseTableViewController.swift; sourceTree = "<group>"; };
+		35467EAE23A8A67600A34717 /* ZLBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBaseViewController.swift; sourceTree = "<group>"; };
+		35467EAF23A8A67600A34717 /* ZLBaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBaseTabBarController.swift; sourceTree = "<group>"; };
+		35467EB123A8A67600A34717 /* ZLBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBaseModel.swift; sourceTree = "<group>"; };
+		35467EB323A8A67600A34717 /* ZLBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLBaseViewModel.swift; sourceTree = "<group>"; };
+		35467EB523A8A67600A34717 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		35467EDD23A8A84C00A34717 /* ZLHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLHomeViewController.swift; sourceTree = "<group>"; };
+		35467EE023A8ADFB00A34717 /* ZLAwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLAwardView.swift; sourceTree = "<group>"; };
+		35467EE223A8AE9300A34717 /* ZLTextArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLTextArcView.swift; sourceTree = "<group>"; };
+		35467EE423A8AF6400A34717 /* ZLRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLRewardView.swift; sourceTree = "<group>"; };
+		35467EE623AB4C9000A34717 /* ZLCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLCircularView.swift; sourceTree = "<group>"; };
+		35A69BB623B0928600E0ECBB /* ZLSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSetViewController.swift; sourceTree = "<group>"; };
+		35A69BB823B0929500E0ECBB /* ZLOtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLOtherViewController.swift; sourceTree = "<group>"; };
+		35A69BBA23B092A100E0ECBB /* ZLItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemViewController.swift; sourceTree = "<group>"; };
+		35A69BBC23B099A600E0ECBB /* ZLCircularModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLCircularModel.swift; sourceTree = "<group>"; };
+		35A69BBE23B09A1E00E0ECBB /* ZLCircularItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLCircularItemModel.swift; sourceTree = "<group>"; };
+		35A69BC023B0A06200E0ECBB /* ZLCircularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLCircularViewModel.swift; sourceTree = "<group>"; };
+		35A69BC223B0AC9700E0ECBB /* ZLResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLResultView.swift; sourceTree = "<group>"; };
+		75A42F2320C44323D7DA3F28 /* Pods-WhatEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatEat.release.xcconfig"; path = "Target Support Files/Pods-WhatEat/Pods-WhatEat.release.xcconfig"; sourceTree = "<group>"; };
+		7A2AB02AB8B304F882620506 /* Pods_WhatEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C188630B4174F3D2B1D5A655 /* Pods-WhatEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatEat.debug.xcconfig"; path = "Target Support Files/Pods-WhatEat/Pods-WhatEat.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35467E4923A8A56700A34717 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4657365ECD36517C46D2810 /* Pods_WhatEat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35467E5D23A8A56800A34717 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35467E6823A8A56800A34717 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		300D53166B87739EBC73D57A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A2AB02AB8B304F882620506 /* Pods_WhatEat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35467E4323A8A56700A34717 = {
+			isa = PBXGroup;
+			children = (
+				35467E4E23A8A56700A34717 /* WhatEat */,
+				35467E6323A8A56800A34717 /* WhatEatTests */,
+				35467E6E23A8A56800A34717 /* WhatEatUITests */,
+				35467E4D23A8A56700A34717 /* Products */,
+				57F1B6029E53C19C8D0B8A15 /* Pods */,
+				300D53166B87739EBC73D57A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		35467E4D23A8A56700A34717 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35467E4C23A8A56700A34717 /* WhatEat.app */,
+				35467E6023A8A56800A34717 /* WhatEatTests.xctest */,
+				35467E6B23A8A56800A34717 /* WhatEatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35467E4E23A8A56700A34717 /* WhatEat */ = {
+			isa = PBXGroup;
+			children = (
+				35467E9323A8A67600A34717 /* ZLComponent */,
+				35467E7D23A8A67600A34717 /* ZLExtensions */,
+				35467E9D23A8A67600A34717 /* ZLInfrastructure */,
+				35467E8B23A8A67600A34717 /* ZLResources */,
+				35467E8523A8A67600A34717 /* ZLSection */,
+				35467E8C23A8A67600A34717 /* ZLShared */,
+				35467E9623A8A67600A34717 /* ZLUtilities */,
+				35467E4F23A8A56700A34717 /* AppDelegate.swift */,
+				35467E5123A8A56700A34717 /* ViewController.swift */,
+				35467E5323A8A56700A34717 /* Main.storyboard */,
+				35467E5623A8A56800A34717 /* Assets.xcassets */,
+				35467E5823A8A56800A34717 /* LaunchScreen.storyboard */,
+				35467E5B23A8A56800A34717 /* Info.plist */,
+			);
+			path = WhatEat;
+			sourceTree = "<group>";
+		};
+		35467E6323A8A56800A34717 /* WhatEatTests */ = {
+			isa = PBXGroup;
+			children = (
+				35467E6423A8A56800A34717 /* WhatEatTests.swift */,
+				35467E6623A8A56800A34717 /* Info.plist */,
+			);
+			path = WhatEatTests;
+			sourceTree = "<group>";
+		};
+		35467E6E23A8A56800A34717 /* WhatEatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				35467E6F23A8A56800A34717 /* WhatEatUITests.swift */,
+				35467E7123A8A56900A34717 /* Info.plist */,
+			);
+			path = WhatEatUITests;
+			sourceTree = "<group>";
+		};
+		35467E7D23A8A67600A34717 /* ZLExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				35467E7E23A8A67600A34717 /* UIColor+Extension.swift */,
+				35467E7F23A8A67600A34717 /* NSObject+UIViewController.swift */,
+				35467E8023A8A67600A34717 /* UIView+ZLAdd.swift */,
+				35467E8123A8A67600A34717 /* String+Extension.swift */,
+				35467E8223A8A67600A34717 /* UIApplication+ZLAdd.swift */,
+				35467E8323A8A67600A34717 /* UIScrollView+Extension.swift */,
+				35467E8423A8A67600A34717 /* Array+Extension.swift */,
+			);
+			path = ZLExtensions;
+			sourceTree = "<group>";
+		};
+		35467E8523A8A67600A34717 /* ZLSection */ = {
+			isa = PBXGroup;
+			children = (
+				35A69BAC23B0926600E0ECBB /* ZLItem */,
+				35A69BB123B0926600E0ECBB /* ZLOther */,
+				35A69BA723B0922300E0ECBB /* ZLSet */,
+				35467ED823A8A82C00A34717 /* ZLHome */,
+			);
+			path = ZLSection;
+			sourceTree = "<group>";
+		};
+		35467E8B23A8A67600A34717 /* ZLResources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLResources;
+			sourceTree = "<group>";
+		};
+		35467E8C23A8A67600A34717 /* ZLShared */ = {
+			isa = PBXGroup;
+			children = (
+				35467E8D23A8A67600A34717 /* ZLGlobalTimer */,
+				35467E8F23A8A67600A34717 /* ZLJSONParser */,
+				35467E9123A8A67600A34717 /* ZLUserInfo */,
+			);
+			path = ZLShared;
+			sourceTree = "<group>";
+		};
+		35467E8D23A8A67600A34717 /* ZLGlobalTimer */ = {
+			isa = PBXGroup;
+			children = (
+				35467E8E23A8A67600A34717 /* ZLGlobalTimer.swift */,
+			);
+			path = ZLGlobalTimer;
+			sourceTree = "<group>";
+		};
+		35467E8F23A8A67600A34717 /* ZLJSONParser */ = {
+			isa = PBXGroup;
+			children = (
+				35467E9023A8A67600A34717 /* ZLJSONParser.swift */,
+			);
+			path = ZLJSONParser;
+			sourceTree = "<group>";
+		};
+		35467E9123A8A67600A34717 /* ZLUserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				35467E9223A8A67600A34717 /* ZLUserInfo.swift */,
+			);
+			path = ZLUserInfo;
+			sourceTree = "<group>";
+		};
+		35467E9323A8A67600A34717 /* ZLComponent */ = {
+			isa = PBXGroup;
+			children = (
+				35467E9423A8A67600A34717 /* ZLVersionUpdate */,
+			);
+			path = ZLComponent;
+			sourceTree = "<group>";
+		};
+		35467E9423A8A67600A34717 /* ZLVersionUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				35467E9523A8A67600A34717 /* ZLVersionUpdate.swift */,
+			);
+			path = ZLVersionUpdate;
+			sourceTree = "<group>";
+		};
+		35467E9623A8A67600A34717 /* ZLUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				35467E9723A8A67600A34717 /* ZLNotification.swift */,
+				35467E9823A8A67600A34717 /* ZLColor.swift */,
+				35467E9923A8A67600A34717 /* ZLUniversal.swift */,
+				35467E9A23A8A67600A34717 /* ZLTableKey.swift */,
+				35467E9B23A8A67600A34717 /* ZLEnums.swift */,
+				35467E9C23A8A67600A34717 /* ZLConfigKey.swift */,
+			);
+			path = ZLUtilities;
+			sourceTree = "<group>";
+		};
+		35467E9D23A8A67600A34717 /* ZLInfrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				35467EDF23A8ADB600A34717 /* ZLRewardView */,
+				35467E9E23A8A67600A34717 /* ZLAdvertising */,
+				35467EA123A8A67600A34717 /* ZLHUD */,
+				35467EA323A8A67600A34717 /* ZLDataBase */,
+				35467EAA23A8A67600A34717 /* ZLBase */,
+			);
+			path = ZLInfrastructure;
+			sourceTree = "<group>";
+		};
+		35467E9E23A8A67600A34717 /* ZLAdvertising */ = {
+			isa = PBXGroup;
+			children = (
+				35467E9F23A8A67600A34717 /* ZLInterstitial.swift */,
+				35467EA023A8A67600A34717 /* ZLBannerView.swift */,
+			);
+			path = ZLAdvertising;
+			sourceTree = "<group>";
+		};
+		35467EA123A8A67600A34717 /* ZLHUD */ = {
+			isa = PBXGroup;
+			children = (
+				35467EA223A8A67600A34717 /* ZLHUD.swift */,
+			);
+			path = ZLHUD;
+			sourceTree = "<group>";
+		};
+		35467EA323A8A67600A34717 /* ZLDataBase */ = {
+			isa = PBXGroup;
+			children = (
+				35467EA423A8A67600A34717 /* ZLDataBase.swift */,
+			);
+			path = ZLDataBase;
+			sourceTree = "<group>";
+		};
+		35467EAA23A8A67600A34717 /* ZLBase */ = {
+			isa = PBXGroup;
+			children = (
+				35467EAB23A8A67600A34717 /* ZLController */,
+				35467EB023A8A67600A34717 /* ZLModel */,
+				35467EB223A8A67600A34717 /* ZLViewModel */,
+				35467EB423A8A67600A34717 /* ZLView */,
+			);
+			path = ZLBase;
+			sourceTree = "<group>";
+		};
+		35467EAB23A8A67600A34717 /* ZLController */ = {
+			isa = PBXGroup;
+			children = (
+				35467EAC23A8A67600A34717 /* ZLBaseNavigationController.swift */,
+				35467EAD23A8A67600A34717 /* ZLBaseTableViewController.swift */,
+				35467EAE23A8A67600A34717 /* ZLBaseViewController.swift */,
+				35467EAF23A8A67600A34717 /* ZLBaseTabBarController.swift */,
+			);
+			path = ZLController;
+			sourceTree = "<group>";
+		};
+		35467EB023A8A67600A34717 /* ZLModel */ = {
+			isa = PBXGroup;
+			children = (
+				35467EB123A8A67600A34717 /* ZLBaseModel.swift */,
+			);
+			path = ZLModel;
+			sourceTree = "<group>";
+		};
+		35467EB223A8A67600A34717 /* ZLViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				35467EB323A8A67600A34717 /* ZLBaseViewModel.swift */,
+			);
+			path = ZLViewModel;
+			sourceTree = "<group>";
+		};
+		35467EB423A8A67600A34717 /* ZLView */ = {
+			isa = PBXGroup;
+			children = (
+				35467EB523A8A67600A34717 /* BaseTableViewCell.swift */,
+			);
+			path = ZLView;
+			sourceTree = "<group>";
+		};
+		35467ED823A8A82C00A34717 /* ZLHome */ = {
+			isa = PBXGroup;
+			children = (
+				35467ED923A8A82C00A34717 /* ZLController */,
+				35467EDA23A8A82C00A34717 /* ZLModel */,
+				35467EDB23A8A82C00A34717 /* ZLViewModel */,
+				35467EDC23A8A82C00A34717 /* ZLView */,
+			);
+			path = ZLHome;
+			sourceTree = "<group>";
+		};
+		35467ED923A8A82C00A34717 /* ZLController */ = {
+			isa = PBXGroup;
+			children = (
+				35467EDD23A8A84C00A34717 /* ZLHomeViewController.swift */,
+			);
+			path = ZLController;
+			sourceTree = "<group>";
+		};
+		35467EDA23A8A82C00A34717 /* ZLModel */ = {
+			isa = PBXGroup;
+			children = (
+				35A69BBC23B099A600E0ECBB /* ZLCircularModel.swift */,
+				35A69BBE23B09A1E00E0ECBB /* ZLCircularItemModel.swift */,
+			);
+			path = ZLModel;
+			sourceTree = "<group>";
+		};
+		35467EDB23A8A82C00A34717 /* ZLViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				35A69BC023B0A06200E0ECBB /* ZLCircularViewModel.swift */,
+			);
+			path = ZLViewModel;
+			sourceTree = "<group>";
+		};
+		35467EDC23A8A82C00A34717 /* ZLView */ = {
+			isa = PBXGroup;
+			children = (
+				35467EE623AB4C9000A34717 /* ZLCircularView.swift */,
+				35A69BC223B0AC9700E0ECBB /* ZLResultView.swift */,
+			);
+			path = ZLView;
+			sourceTree = "<group>";
+		};
+		35467EDF23A8ADB600A34717 /* ZLRewardView */ = {
+			isa = PBXGroup;
+			children = (
+				35467EE023A8ADFB00A34717 /* ZLAwardView.swift */,
+				35467EE223A8AE9300A34717 /* ZLTextArcView.swift */,
+				35467EE423A8AF6400A34717 /* ZLRewardView.swift */,
+			);
+			path = ZLRewardView;
+			sourceTree = "<group>";
+		};
+		35A69BA723B0922300E0ECBB /* ZLSet */ = {
+			isa = PBXGroup;
+			children = (
+				35A69BA823B0922300E0ECBB /* ZLController */,
+				35A69BA923B0922300E0ECBB /* ZLModel */,
+				35A69BAA23B0922300E0ECBB /* ZLViewModel */,
+				35A69BAB23B0922300E0ECBB /* ZLView */,
+			);
+			path = ZLSet;
+			sourceTree = "<group>";
+		};
+		35A69BA823B0922300E0ECBB /* ZLController */ = {
+			isa = PBXGroup;
+			children = (
+				35A69BB623B0928600E0ECBB /* ZLSetViewController.swift */,
+			);
+			path = ZLController;
+			sourceTree = "<group>";
+		};
+		35A69BA923B0922300E0ECBB /* ZLModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLModel;
+			sourceTree = "<group>";
+		};
+		35A69BAA23B0922300E0ECBB /* ZLViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLViewModel;
+			sourceTree = "<group>";
+		};
+		35A69BAB23B0922300E0ECBB /* ZLView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLView;
+			sourceTree = "<group>";
+		};
+		35A69BAC23B0926600E0ECBB /* ZLItem */ = {
+			isa = PBXGroup;
+			children = (
+				35A69BAD23B0926600E0ECBB /* ZLController */,
+				35A69BAE23B0926600E0ECBB /* ZLModel */,
+				35A69BAF23B0926600E0ECBB /* ZLViewModel */,
+				35A69BB023B0926600E0ECBB /* ZLView */,
+			);
+			path = ZLItem;
+			sourceTree = "<group>";
+		};
+		35A69BAD23B0926600E0ECBB /* ZLController */ = {
+			isa = PBXGroup;
+			children = (
+				35A69BBA23B092A100E0ECBB /* ZLItemViewController.swift */,
+			);
+			path = ZLController;
+			sourceTree = "<group>";
+		};
+		35A69BAE23B0926600E0ECBB /* ZLModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLModel;
+			sourceTree = "<group>";
+		};
+		35A69BAF23B0926600E0ECBB /* ZLViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLViewModel;
+			sourceTree = "<group>";
+		};
+		35A69BB023B0926600E0ECBB /* ZLView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLView;
+			sourceTree = "<group>";
+		};
+		35A69BB123B0926600E0ECBB /* ZLOther */ = {
+			isa = PBXGroup;
+			children = (
+				35A69BB223B0926600E0ECBB /* ZLController */,
+				35A69BB323B0926600E0ECBB /* ZLModel */,
+				35A69BB423B0926600E0ECBB /* ZLViewModel */,
+				35A69BB523B0926600E0ECBB /* ZLView */,
+			);
+			path = ZLOther;
+			sourceTree = "<group>";
+		};
+		35A69BB223B0926600E0ECBB /* ZLController */ = {
+			isa = PBXGroup;
+			children = (
+				35A69BB823B0929500E0ECBB /* ZLOtherViewController.swift */,
+			);
+			path = ZLController;
+			sourceTree = "<group>";
+		};
+		35A69BB323B0926600E0ECBB /* ZLModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLModel;
+			sourceTree = "<group>";
+		};
+		35A69BB423B0926600E0ECBB /* ZLViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLViewModel;
+			sourceTree = "<group>";
+		};
+		35A69BB523B0926600E0ECBB /* ZLView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLView;
+			sourceTree = "<group>";
+		};
+		57F1B6029E53C19C8D0B8A15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C188630B4174F3D2B1D5A655 /* Pods-WhatEat.debug.xcconfig */,
+				75A42F2320C44323D7DA3F28 /* Pods-WhatEat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35467E4B23A8A56700A34717 /* WhatEat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35467E7423A8A56900A34717 /* Build configuration list for PBXNativeTarget "WhatEat" */;
+			buildPhases = (
+				A6EEDCEB49DA8E686ECC93C4 /* [CP] Check Pods Manifest.lock */,
+				35467E4823A8A56700A34717 /* Sources */,
+				35467E4923A8A56700A34717 /* Frameworks */,
+				35467E4A23A8A56700A34717 /* Resources */,
+				3464F711D26AC4E81408B647 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhatEat;
+			productName = WhatEat;
+			productReference = 35467E4C23A8A56700A34717 /* WhatEat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35467E5F23A8A56800A34717 /* WhatEatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35467E7723A8A56900A34717 /* Build configuration list for PBXNativeTarget "WhatEatTests" */;
+			buildPhases = (
+				35467E5C23A8A56800A34717 /* Sources */,
+				35467E5D23A8A56800A34717 /* Frameworks */,
+				35467E5E23A8A56800A34717 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35467E6223A8A56800A34717 /* PBXTargetDependency */,
+			);
+			name = WhatEatTests;
+			productName = WhatEatTests;
+			productReference = 35467E6023A8A56800A34717 /* WhatEatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		35467E6A23A8A56800A34717 /* WhatEatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35467E7A23A8A56900A34717 /* Build configuration list for PBXNativeTarget "WhatEatUITests" */;
+			buildPhases = (
+				35467E6723A8A56800A34717 /* Sources */,
+				35467E6823A8A56800A34717 /* Frameworks */,
+				35467E6923A8A56800A34717 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35467E6D23A8A56800A34717 /* PBXTargetDependency */,
+			);
+			name = WhatEatUITests;
+			productName = WhatEatUITests;
+			productReference = 35467E6B23A8A56800A34717 /* WhatEatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35467E4423A8A56700A34717 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = zhouzilong;
+				TargetAttributes = {
+					35467E4B23A8A56700A34717 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					35467E5F23A8A56800A34717 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 35467E4B23A8A56700A34717;
+					};
+					35467E6A23A8A56800A34717 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 35467E4B23A8A56700A34717;
+					};
+				};
+			};
+			buildConfigurationList = 35467E4723A8A56700A34717 /* Build configuration list for PBXProject "WhatEat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35467E4323A8A56700A34717;
+			productRefGroup = 35467E4D23A8A56700A34717 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35467E4B23A8A56700A34717 /* WhatEat */,
+				35467E5F23A8A56800A34717 /* WhatEatTests */,
+				35467E6A23A8A56800A34717 /* WhatEatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35467E4A23A8A56700A34717 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35467E5A23A8A56800A34717 /* LaunchScreen.storyboard in Resources */,
+				35467E5723A8A56800A34717 /* Assets.xcassets in Resources */,
+				35467E5523A8A56700A34717 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35467E5E23A8A56800A34717 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35467E6923A8A56800A34717 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3464F711D26AC4E81408B647 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatEat/Pods-WhatEat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatEat/Pods-WhatEat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatEat/Pods-WhatEat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6EEDCEB49DA8E686ECC93C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatEat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35467E4823A8A56700A34717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35467EB623A8A67600A34717 /* UIColor+Extension.swift in Sources */,
+				35A69BBD23B099A600E0ECBB /* ZLCircularModel.swift in Sources */,
+				35A69BB723B0928600E0ECBB /* ZLSetViewController.swift in Sources */,
+				35A69BB923B0929500E0ECBB /* ZLOtherViewController.swift in Sources */,
+				35467E5223A8A56700A34717 /* ViewController.swift in Sources */,
+				35467EC823A8A67600A34717 /* ZLBannerView.swift in Sources */,
+				35467EE523A8AF6400A34717 /* ZLRewardView.swift in Sources */,
+				35467EB823A8A67600A34717 /* UIView+ZLAdd.swift in Sources */,
+				35467EBC23A8A67600A34717 /* Array+Extension.swift in Sources */,
+				35467EBF23A8A67600A34717 /* ZLUserInfo.swift in Sources */,
+				35467ED123A8A67600A34717 /* ZLBaseTableViewController.swift in Sources */,
+				35A69BC323B0AC9700E0ECBB /* ZLResultView.swift in Sources */,
+				35467ED523A8A67600A34717 /* ZLBaseViewModel.swift in Sources */,
+				35467ED323A8A67600A34717 /* ZLBaseTabBarController.swift in Sources */,
+				35A69BC123B0A06200E0ECBB /* ZLCircularViewModel.swift in Sources */,
+				35467EBD23A8A67600A34717 /* ZLGlobalTimer.swift in Sources */,
+				35467EE723AB4C9000A34717 /* ZLCircularView.swift in Sources */,
+				35A69BBF23B09A1E00E0ECBB /* ZLCircularItemModel.swift in Sources */,
+				35467ED223A8A67600A34717 /* ZLBaseViewController.swift in Sources */,
+				35467ECA23A8A67600A34717 /* ZLDataBase.swift in Sources */,
+				35467EBA23A8A67600A34717 /* UIApplication+ZLAdd.swift in Sources */,
+				35467EE323A8AE9300A34717 /* ZLTextArcView.swift in Sources */,
+				35467EB723A8A67600A34717 /* NSObject+UIViewController.swift in Sources */,
+				35467EBE23A8A67600A34717 /* ZLJSONParser.swift in Sources */,
+				35467EB923A8A67600A34717 /* String+Extension.swift in Sources */,
+				35467ED623A8A67600A34717 /* BaseTableViewCell.swift in Sources */,
+				35467EC923A8A67600A34717 /* ZLHUD.swift in Sources */,
+				35467EC523A8A67600A34717 /* ZLEnums.swift in Sources */,
+				35467E5023A8A56700A34717 /* AppDelegate.swift in Sources */,
+				35467EC323A8A67600A34717 /* ZLUniversal.swift in Sources */,
+				35467EDE23A8A84C00A34717 /* ZLHomeViewController.swift in Sources */,
+				35467ED023A8A67600A34717 /* ZLBaseNavigationController.swift in Sources */,
+				35467EC723A8A67600A34717 /* ZLInterstitial.swift in Sources */,
+				35467EC623A8A67600A34717 /* ZLConfigKey.swift in Sources */,
+				35467EBB23A8A67600A34717 /* UIScrollView+Extension.swift in Sources */,
+				35467EC223A8A67600A34717 /* ZLColor.swift in Sources */,
+				35467EC123A8A67600A34717 /* ZLNotification.swift in Sources */,
+				35A69BBB23B092A100E0ECBB /* ZLItemViewController.swift in Sources */,
+				35467EE123A8ADFB00A34717 /* ZLAwardView.swift in Sources */,
+				35467EC423A8A67600A34717 /* ZLTableKey.swift in Sources */,
+				35467EC023A8A67600A34717 /* ZLVersionUpdate.swift in Sources */,
+				35467ED423A8A67600A34717 /* ZLBaseModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35467E5C23A8A56800A34717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35467E6523A8A56800A34717 /* WhatEatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35467E6723A8A56800A34717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35467E7023A8A56800A34717 /* WhatEatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35467E6223A8A56800A34717 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35467E4B23A8A56700A34717 /* WhatEat */;
+			targetProxy = 35467E6123A8A56800A34717 /* PBXContainerItemProxy */;
+		};
+		35467E6D23A8A56800A34717 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35467E4B23A8A56700A34717 /* WhatEat */;
+			targetProxy = 35467E6C23A8A56800A34717 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		35467E5323A8A56700A34717 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35467E5423A8A56700A34717 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		35467E5823A8A56800A34717 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35467E5923A8A56800A34717 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35467E7223A8A56900A34717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		35467E7323A8A56900A34717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35467E7523A8A56900A34717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C188630B4174F3D2B1D5A655 /* Pods-WhatEat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YS5666643L;
+				INFOPLIST_FILE = WhatEat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhouzilong.WhatEat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		35467E7623A8A56900A34717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A42F2320C44323D7DA3F28 /* Pods-WhatEat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YS5666643L;
+				INFOPLIST_FILE = WhatEat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhouzilong.WhatEat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		35467E7823A8A56900A34717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YS5666643L;
+				INFOPLIST_FILE = WhatEatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhouzilong.WhatEatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatEat.app/WhatEat";
+			};
+			name = Debug;
+		};
+		35467E7923A8A56900A34717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YS5666643L;
+				INFOPLIST_FILE = WhatEatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhouzilong.WhatEatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatEat.app/WhatEat";
+			};
+			name = Release;
+		};
+		35467E7B23A8A56900A34717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YS5666643L;
+				INFOPLIST_FILE = WhatEatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhouzilong.WhatEatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WhatEat;
+			};
+			name = Debug;
+		};
+		35467E7C23A8A56900A34717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YS5666643L;
+				INFOPLIST_FILE = WhatEatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhouzilong.WhatEatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WhatEat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35467E4723A8A56700A34717 /* Build configuration list for PBXProject "WhatEat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35467E7223A8A56900A34717 /* Debug */,
+				35467E7323A8A56900A34717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35467E7423A8A56900A34717 /* Build configuration list for PBXNativeTarget "WhatEat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35467E7523A8A56900A34717 /* Debug */,
+				35467E7623A8A56900A34717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35467E7723A8A56900A34717 /* Build configuration list for PBXNativeTarget "WhatEatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35467E7823A8A56900A34717 /* Debug */,
+				35467E7923A8A56900A34717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35467E7A23A8A56900A34717 /* Build configuration list for PBXNativeTarget "WhatEatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35467E7B23A8A56900A34717 /* Debug */,
+				35467E7C23A8A56900A34717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35467E4423A8A56700A34717 /* Project object */;
+}
