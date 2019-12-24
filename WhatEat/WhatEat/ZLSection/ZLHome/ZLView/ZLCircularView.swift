@@ -26,6 +26,8 @@ class ZLCircularView: UIView {
     var endAngle:Float = 0
     var allValue:Float = 0
     var dataSource: Array<ZLCircularItemModel> = []
+    var awardViews: Array<ZLAwardView> = []
+    
     var type: CircularType = .normal
     
     var colors = [color_fa5a5a, color_f0d264, color_82c8a0, color_7fccde,color_6698cb, color_cb99c5]
@@ -49,7 +51,7 @@ class ZLCircularView: UIView {
         
         for index in 0...dataSource.count-1 {
             let value = dataSource[index]
-            allValue = allValue+(value.uiSize ?? 100)
+            allValue = allValue+(value.uiSize)
         }
         
         //for循环画图
@@ -59,6 +61,9 @@ class ZLCircularView: UIView {
         
         let tempA: CGFloat = 2 * CGFloat.pi / CGFloat(dataSource.count)
         
+//        for view in awardViews {
+//            awardViews
+//        }
         
         for index in 0...dataSource.count-1 {
             let model = dataSource[index]
@@ -76,6 +81,7 @@ class ZLCircularView: UIView {
             let rotationAngle = CGFloat(tempA * CGFloat(index))
             awardView.transform = CGAffineTransform(rotationAngle: rotationAngle)
             bgView.addSubview(awardView)
+            awardViews.append(awardView)
         }
         bringSubviewToFront(topView)
     }
@@ -85,7 +91,7 @@ class ZLCircularView: UIView {
     func bezierPaint(index:Int) {
         
         let targetValue = dataSource[index].uiSize
-        let ratioString = String(format: "%.5f", targetValue!/Float(allValue))
+        let ratioString = String(format: "%.5f", targetValue/Float(allValue))
         
         endAngle = startAngle + (Float(ratioString)!)*2*Float(Double.pi)
         
@@ -103,7 +109,7 @@ class ZLCircularView: UIView {
         outLayer.path = bezierOutPath.cgPath
         bgView.layer.addSublayer(outLayer)
         let start = dataSource[index].uiSize
-        let scaleString = String(format: "%.5f", start!/Float(allValue))
+        let scaleString = String(format: "%.5f", start/Float(allValue))
         startAngle = startAngle+(Float(scaleString)!-1)*2*Float(Double.pi)
         outBezerArrs.append(bezierOutPath)
         outLayers.append(outLayer)

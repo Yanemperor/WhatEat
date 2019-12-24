@@ -106,6 +106,9 @@ class ZLHomeViewController: ZLBaseViewController {
         temp.rx.controlEvent(.touchUpInside).subscribe { (button) in
             let vc = ZLItemViewController()
             vc.model = self.vm.circularModel
+            vc.backBlock = { id in
+                self.vm.getCircular(id: id)
+            }
             self.navigationController?.pushViewController(vc, animated: true)
         }.disposed(by: disposeBag)
         return temp

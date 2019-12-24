@@ -11,7 +11,9 @@ import UIKit
 class ZLItemViewController: ZLBaseTableViewController {
 
     var model: ZLCircularModel?
-    
+    typealias BackBlock = (Int) -> ()
+    var backBlock: BackBlock?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +28,17 @@ class ZLItemViewController: ZLBaseTableViewController {
     
     func initUI() {
         setRightBarButtonItem(name: "nav_done", type: .image) {
-            
+            self.vm.saveDB()
+            if self.backBlock != nil {
+                self.backBlock!(self.vm.model?.id ?? 0)
+            }
+            self.navigationController?.popViewController(animated: true)
         }
         
         tableView.tableHeaderView = headView
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = autoSize(number: 50)
+        tableView.register(ZLItemViewCell.self, forCellReuseIdentifier: "ZLItemViewCell")
     }
     
     lazy var headView: ZLItemHeadView = {
@@ -49,8 +57,9 @@ extension ZLItemViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = self.vm.model?.items[indexPath.row].title
+        let cell: ZLItemViewCell = tableView.dequeueReusableCell(withIdentifier: "ZLItemViewCell", for: indexPath) as! ZLItemViewCell
+//        cell.setCircularItemModel(model: self.vm.model?.items[indexPath.row] ?? ZLCircularItemModel())
+        cell.model = self.vm.model?.items[indexPath.row]
         return cell
     }
 }

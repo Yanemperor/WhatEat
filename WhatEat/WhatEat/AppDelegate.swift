@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 import Bugly
-
+import IQKeyboardManagerSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         window?.rootViewController = getRootVC()
         window?.makeKeyAndVisible()
+        IQKeyboardManager.shared.enable = true
         initAdvertising()
 //        loadAdTimer()
         ZLDataBase.shared.createDB()

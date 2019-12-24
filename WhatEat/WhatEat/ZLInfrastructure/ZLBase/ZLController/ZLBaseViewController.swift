@@ -16,6 +16,7 @@ class ZLBaseViewController: UIViewController {
         super.viewDidLoad()
 //        navigationController?.navigationBar.isTranslucent = false
 //        automaticallyAdjustsScrollViewInsets = true
+        
         view.backgroundColor = UIColor.white
         setupNormalNavigationBar()
         setHideenTabbar()

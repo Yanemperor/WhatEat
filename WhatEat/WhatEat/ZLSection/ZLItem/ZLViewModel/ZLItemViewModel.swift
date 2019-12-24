@@ -10,5 +10,9 @@ import UIKit
 
 class ZLItemViewModel: ZLBaseViewModel {
     var model: ZLCircularModel?
-
+    
+    func saveDB() {
+        ZLDataBase.shared.deleteCircularTable(model: model!)
+        ZLDataBase.shared.insertCircularTable(array: [model!])
+    }
 }

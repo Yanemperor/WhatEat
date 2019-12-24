@@ -62,11 +62,38 @@ extension ZLDataBase {
         }
     }
     
-    func insertPoliticalTable(array: Array<ZLCircularModel>) {
+    func insertCircularTable(array: Array<ZLCircularModel>) {
         do {
             try dataBase?.insert(objects: array, intoTable: ZLTableKey.circularTable)
         } catch {
             print("####转盘表插入失败####")
+        }
+    }
+    
+    func updateCircularTable(model: ZLCircularModel) {
+        do {
+//            try dataBase?.update(table: ZLTableKey.circularTable, on: ZLCircularModel.Properties.id, with: model)
+            try dataBase?.update(table: ZLTableKey.circularTable, on: ZLCircularModel.Properties.id, with: model, where: ZLCircularModel.Properties.id == model.id)
+        } catch {
+            print("####转盘表更新数据失败####")
+        }
+    }
+    
+    func deleteCircularTable(model: ZLCircularModel) {
+        do {
+            try dataBase?.delete(fromTable: ZLTableKey.circularTable,
+                                 where: ZLCircularModel.Properties.id == model.id)
+            
+        } catch {
+            print("####转盘表删除失败####")
+        }
+    }
+    
+    func getCircularTable(id: Int) -> ZLCircularModel? {
+        do {
+            return try dataBase?.getObject(on: ZLCircularModel.CodingKeys.all, fromTable: ZLTableKey.circularTable, where: ZLCircularModel.Properties.id == id)
+        } catch {
+            return nil
         }
     }
     

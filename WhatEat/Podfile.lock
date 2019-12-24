@@ -27,6 +27,7 @@ PODS:
   - GoogleUtilities/Reachability (6.3.1):
     - GoogleUtilities/Logger
   - HandyJSON (5.0.0)
+  - IQKeyboardManagerSwift (6.5.1)
   - MBProgressHUD (1.1.0)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - FDFullscreenPopGesture (= 1.1)
   - Google-Mobile-Ads-SDK
   - HandyJSON (~> 5.0.0)
+  - IQKeyboardManagerSwift
   - MBProgressHUD (~> 1.1.0)
   - RxCocoa
   - RxSwift
@@ -72,6 +74,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - HandyJSON
+    - IQKeyboardManagerSwift
     - MBProgressHUD
     - nanopb
     - RxCocoa
@@ -92,6 +95,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 434cc7be25e71dc04b8d0e3079125127b330e84a
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
+  IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
@@ -104,6 +108,6 @@ SPEC CHECKSUMS:
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 07a4724fdde8904b896eae742faada24fdf3413b
+PODFILE CHECKSUM: 254ed6273fc9c131fa2e3c2f69bffb2bf45d368a
 
 COCOAPODS: 1.7.4

@@ -22,8 +22,14 @@ class ZLCircularViewModel: ZLBaseViewModel {
             circularModel = temp[0]
         }else{
             circularModel = getInitCircularModel()
-            ZLDataBase.shared.insertPoliticalTable(array: [circularModel!])
+            ZLDataBase.shared.insertCircularTable(array: [circularModel!])
         }
+        reload()
+    }
+    
+    func getCircular(id: Int) {
+        let temp: ZLCircularModel = ZLDataBase.shared.getCircularTable(id: id)!
+        circularModel = temp
         reload()
     }
     
@@ -31,6 +37,7 @@ class ZLCircularViewModel: ZLBaseViewModel {
         let model = ZLCircularModel()
         model.title = "吃啥呀？"
         model.type = 1
+        model.id = 1
         var items: Array<ZLCircularItemModel> = []
         for itemTitle in itemTitle {
             let item: ZLCircularItemModel = ZLCircularItemModel()
