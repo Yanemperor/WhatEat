@@ -49,6 +49,7 @@ class ZLCircularView: UIView {
         centerPoint = CGPoint.init(x: frame.size.width/2.0, y: frame.size.height/2.0)
         startAngle = Float(CGFloat.pi / 2.0) - 2 * .pi / Float(dataSource.count) / 2
         
+        allValue = 0
         for index in 0...dataSource.count-1 {
             let value = dataSource[index]
             allValue = allValue+(value.uiSize)
@@ -61,9 +62,11 @@ class ZLCircularView: UIView {
         
         let tempA: CGFloat = 2 * CGFloat.pi / CGFloat(dataSource.count)
         
-//        for view in awardViews {
-//            awardViews
-//        }
+        
+        
+        for view in awardViews {
+            view.removeFromSuperview()
+        }
         
         for index in 0...dataSource.count-1 {
             let model = dataSource[index]

@@ -25,11 +25,22 @@ class ZLHomeViewController: ZLBaseViewController {
     func initData() {
         vm.getCircular()
         vm.reloadBlock = {
-            
+            self.setNavTitle()
+        }
+    }
+    
+    func setNavTitle() {
+        print(self.vm.circularModel?.title ?? "nil")
+        if self.vm.circularModel?.title?.isEmpty ?? true {
+            self.titleView.isHidden = true
+        }else{
+            self.titleView.isHidden = false
+            self.titleLabel.text = self.vm.circularModel?.title
         }
     }
     
     func initUI() {
+        setNavTitle()
         navTitle(title: "吃啥呀？")
         setRightBarButtonItem(name: "nav_set", type: .image) {
             let vc = ZLSetViewController()
@@ -62,6 +73,11 @@ class ZLHomeViewController: ZLBaseViewController {
         }
         
         UIApplication.shared.keyWindow?.addSubview(resultView)
+    }
+    
+    func setcircularViewData() {
+        circularView.dataSource = vm.circularModel!.items
+        circularView.drawPieChartView()
     }
     
     lazy var titleView: UIView = {

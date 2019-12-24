@@ -11,7 +11,7 @@ import WCDBSwift
 
 class ZLCircularItemModel: ZLBaseModel, TableCodable {
     var title: String?              // 选项名
-    var probability: Int = 0        // 概率  都为一百则为均分
+    var probability: Float = 0        // 概率  都为一百则为均分
     var uiSize: Float = 0.0              // 转盘项大小 都为一百则为均分
     
     enum CodingKeys: String, CodingTableKey {

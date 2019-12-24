@@ -35,9 +35,10 @@ class ZLItemViewController: ZLBaseTableViewController {
             self.navigationController?.popViewController(animated: true)
         }
         
-        tableView.tableHeaderView = headView
+//        tableView.tableHeaderView = headView
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = autoSize(number: 50)
+        tableView.register(ZLItemTitleCell.self, forCellReuseIdentifier: "ZLItemTitleCell")
         tableView.register(ZLItemViewCell.self, forCellReuseIdentifier: "ZLItemViewCell")
     }
     
@@ -52,14 +53,27 @@ class ZLItemViewController: ZLBaseTableViewController {
 }
 
 extension ZLItemViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
         return self.vm.model?.items.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ZLItemViewCell = tableView.dequeueReusableCell(withIdentifier: "ZLItemViewCell", for: indexPath) as! ZLItemViewCell
-//        cell.setCircularItemModel(model: self.vm.model?.items[indexPath.row] ?? ZLCircularItemModel())
-        cell.model = self.vm.model?.items[indexPath.row]
-        return cell
+        if indexPath.section == 0 {
+            let cell: ZLItemTitleCell = tableView.dequeueReusableCell(withIdentifier: "ZLItemTitleCell", for: indexPath) as! ZLItemTitleCell
+            cell.model = self.vm.model
+            return cell
+        }else{
+            let cell: ZLItemViewCell = tableView.dequeueReusableCell(withIdentifier: "ZLItemViewCell", for: indexPath) as! ZLItemViewCell
+            cell.model = self.vm.model?.items[indexPath.row]
+            return cell
+        }
     }
 }

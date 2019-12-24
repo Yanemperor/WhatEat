@@ -63,7 +63,9 @@ class ZLItemViewCell: UITableViewCell {
         temp.font = autoFont(font: 16)
         temp.rx.text.orEmpty.changed.subscribe(onNext: { (text) in
             print(text)
-            self.model?.title = text
+            if !text.isEmpty {
+                self.model?.title = text
+            }
         }).disposed(by: disposeBag)
         return temp
     }()
@@ -73,6 +75,12 @@ class ZLItemViewCell: UITableViewCell {
         temp.textColor = color_666666
         temp.textAlignment = .left
         temp.font = autoFont(font: 16)
+        temp.rx.text.orEmpty.changed.subscribe(onNext: { (text) in
+            print(text)
+            if !text.isEmpty {
+                self.model?.probability = Float(text)!
+            }
+        }).disposed(by: disposeBag)
         return temp
     }()
     
@@ -81,6 +89,12 @@ class ZLItemViewCell: UITableViewCell {
         temp.textColor = color_666666
         temp.textAlignment = .left
         temp.font = autoFont(font: 16)
+        temp.rx.text.orEmpty.changed.subscribe(onNext: { (text) in
+            print(text)
+            if !text.isEmpty {
+                self.model?.uiSize = Float(text)!
+            }
+        }).disposed(by: disposeBag)
         return temp
     }()
     
