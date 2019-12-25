@@ -15,4 +15,12 @@ class ZLItemViewModel: ZLBaseViewModel {
         ZLDataBase.shared.deleteCircularTable(model: model!)
         ZLDataBase.shared.insertCircularTable(array: [model!])
     }
+    
+    func removeItemData(model: ZLCircularItemModel) {
+        self.model?.items.removeAll(where: { (tempModel) -> Bool in
+            let results: Bool = (tempModel === model)
+            return results
+        })
+
+    }
 }

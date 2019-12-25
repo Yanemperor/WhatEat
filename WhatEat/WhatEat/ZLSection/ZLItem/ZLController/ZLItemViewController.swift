@@ -40,13 +40,9 @@ class ZLItemViewController: ZLBaseTableViewController {
         tableView.estimatedRowHeight = autoSize(number: 50)
         tableView.register(ZLItemTitleCell.self, forCellReuseIdentifier: "ZLItemTitleCell")
         tableView.register(ZLItemViewCell.self, forCellReuseIdentifier: "ZLItemViewCell")
+        tableView.register(ZLItemFooterCell.self, forCellReuseIdentifier: "ZLItemFooterCell")
+        
     }
-    
-    lazy var headView: ZLItemHeadView = {
-        let temp = ZLItemHeadView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: autoSize(number: 50)))
-        temp.backgroundColor = color_ffffff
-        return temp
-    }()
     
     lazy var vm: ZLItemViewModel = ZLItemViewModel()
     
@@ -55,11 +51,11 @@ class ZLItemViewController: ZLBaseTableViewController {
 extension ZLItemViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        if section == 0 || section == 2{
             return 1
         }
         return self.vm.model?.items.count ?? 0
@@ -69,11 +65,32 @@ extension ZLItemViewController {
         if indexPath.section == 0 {
             let cell: ZLItemTitleCell = tableView.dequeueReusableCell(withIdentifier: "ZLItemTitleCell", for: indexPath) as! ZLItemTitleCell
             cell.model = self.vm.model
+            cell.selectionStyle = .none
+            cell.reloadBlock = {
+                tableView.reloadData()
+            }
+            return cell
+        }else if indexPath.section == 2 {
+            let cell: ZLItemFooterCell = tableView.dequeueReusableCell(withIdentifier: "ZLItemFooterCell", for: indexPath) as! ZLItemFooterCell
+            cell.selectionStyle = .none
             return cell
         }else{
             let cell: ZLItemViewCell = tableView.dequeueReusableCell(withIdentifier: "ZLItemViewCell", for: indexPath) as! ZLItemViewCell
             cell.model = self.vm.model?.items[indexPath.row]
+            cell.delBlock = { model in
+                self.vm.removeItemData(model: model)
+                tableView.reloadData()
+            }
+            cell.selectionStyle = .none
             return cell
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 {
+            let tempModel = ZLCircularItemModel()
+            self.vm.model?.items.append(tempModel)
+            tableView.reloadData()
         }
     }
 }

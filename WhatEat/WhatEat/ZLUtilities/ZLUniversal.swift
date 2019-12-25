@@ -23,6 +23,9 @@ let kNavigationBarHeight: CGFloat = isFullScreen ? 88 : 64
 // tabBarHeight
 let kTabBarHeight: CGFloat = isFullScreen ? 49 + 34 : 49
 
+let kEqualToTabBarBottom: CGFloat = isFullScreen ? 34 : 0
+
+
 func autoSize(number: CGFloat) -> CGFloat {
     var num = number
     num = num * UIScreen.main.bounds.size.width / kCurrentWidth

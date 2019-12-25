@@ -23,7 +23,7 @@ class ZLBaseTableViewController: ZLBaseViewController {
             if (navigationController?.viewControllers.count)! <= 1 {
                 make.bottom.equalToSuperview().offset(-kTabBarHeight)
             }else{
-                make.bottom.equalToSuperview()
+                make.bottom.equalToSuperview().offset(kEqualToTabBarBottom)
             }
         }
         tableView.estimatedRowHeight = 0

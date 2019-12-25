@@ -49,6 +49,8 @@
 		35467EE723AB4C9000A34717 /* ZLCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467EE623AB4C9000A34717 /* ZLCircularView.swift */; };
 		3552C8F423B1B76F0060380F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552C8F323B1B76F0060380F /* Operators.swift */; };
 		3562B96523B20D1D0034222E /* ZLItemTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B96423B20D1D0034222E /* ZLItemTitleCell.swift */; };
+		3562B96723B2F9E40034222E /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B96623B2F9E40034222E /* UITextField+Extension.swift */; };
+		3562B96923B309150034222E /* ZLItemFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B96823B309150034222E /* ZLItemFooterCell.swift */; };
 		35A69BB723B0928600E0ECBB /* ZLSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BB623B0928600E0ECBB /* ZLSetViewController.swift */; };
 		35A69BB923B0929500E0ECBB /* ZLOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BB823B0929500E0ECBB /* ZLOtherViewController.swift */; };
 		35A69BBB23B092A100E0ECBB /* ZLItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BBA23B092A100E0ECBB /* ZLItemViewController.swift */; };
@@ -56,7 +58,6 @@
 		35A69BBF23B09A1E00E0ECBB /* ZLCircularItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BBE23B09A1E00E0ECBB /* ZLCircularItemModel.swift */; };
 		35A69BC123B0A06200E0ECBB /* ZLCircularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC023B0A06200E0ECBB /* ZLCircularViewModel.swift */; };
 		35A69BC323B0AC9700E0ECBB /* ZLResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC223B0AC9700E0ECBB /* ZLResultView.swift */; };
-		35A69BC523B0B7DE00E0ECBB /* ZLItemHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC423B0B7DE00E0ECBB /* ZLItemHeadView.swift */; };
 		35A69BC723B0B9C400E0ECBB /* ZLItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC623B0B9C400E0ECBB /* ZLItemViewModel.swift */; };
 		35A69BC923B1A1DA00E0ECBB /* ZLItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BC823B1A1DA00E0ECBB /* ZLItemViewCell.swift */; };
 		D4657365ECD36517C46D2810 /* Pods_WhatEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2AB02AB8B304F882620506 /* Pods_WhatEat.framework */; };
@@ -128,6 +129,8 @@
 		35467EE623AB4C9000A34717 /* ZLCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLCircularView.swift; sourceTree = "<group>"; };
 		3552C8F323B1B76F0060380F /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		3562B96423B20D1D0034222E /* ZLItemTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemTitleCell.swift; sourceTree = "<group>"; };
+		3562B96623B2F9E40034222E /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		3562B96823B309150034222E /* ZLItemFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemFooterCell.swift; sourceTree = "<group>"; };
 		35A69BB623B0928600E0ECBB /* ZLSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSetViewController.swift; sourceTree = "<group>"; };
 		35A69BB823B0929500E0ECBB /* ZLOtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLOtherViewController.swift; sourceTree = "<group>"; };
 		35A69BBA23B092A100E0ECBB /* ZLItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +138,6 @@
 		35A69BBE23B09A1E00E0ECBB /* ZLCircularItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLCircularItemModel.swift; sourceTree = "<group>"; };
 		35A69BC023B0A06200E0ECBB /* ZLCircularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLCircularViewModel.swift; sourceTree = "<group>"; };
 		35A69BC223B0AC9700E0ECBB /* ZLResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLResultView.swift; sourceTree = "<group>"; };
-		35A69BC423B0B7DE00E0ECBB /* ZLItemHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemHeadView.swift; sourceTree = "<group>"; };
 		35A69BC623B0B9C400E0ECBB /* ZLItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemViewModel.swift; sourceTree = "<group>"; };
 		35A69BC823B1A1DA00E0ECBB /* ZLItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemViewCell.swift; sourceTree = "<group>"; };
 		75A42F2320C44323D7DA3F28 /* Pods-WhatEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatEat.release.xcconfig"; path = "Target Support Files/Pods-WhatEat/Pods-WhatEat.release.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				35467E8223A8A67600A34717 /* UIApplication+ZLAdd.swift */,
 				35467E8323A8A67600A34717 /* UIScrollView+Extension.swift */,
 				35467E8423A8A67600A34717 /* Array+Extension.swift */,
+				3562B96623B2F9E40034222E /* UITextField+Extension.swift */,
 			);
 			path = ZLExtensions;
 			sourceTree = "<group>";
@@ -556,9 +559,9 @@
 		35A69BB023B0926600E0ECBB /* ZLView */ = {
 			isa = PBXGroup;
 			children = (
-				35A69BC423B0B7DE00E0ECBB /* ZLItemHeadView.swift */,
 				3562B96423B20D1D0034222E /* ZLItemTitleCell.swift */,
 				35A69BC823B1A1DA00E0ECBB /* ZLItemViewCell.swift */,
+				3562B96823B309150034222E /* ZLItemFooterCell.swift */,
 			);
 			path = ZLView;
 			sourceTree = "<group>";
@@ -791,6 +794,8 @@
 				35A69BBD23B099A600E0ECBB /* ZLCircularModel.swift in Sources */,
 				35A69BB723B0928600E0ECBB /* ZLSetViewController.swift in Sources */,
 				35A69BB923B0929500E0ECBB /* ZLOtherViewController.swift in Sources */,
+				3562B96723B2F9E40034222E /* UITextField+Extension.swift in Sources */,
+				3562B96923B309150034222E /* ZLItemFooterCell.swift in Sources */,
 				35467E5223A8A56700A34717 /* ViewController.swift in Sources */,
 				35467EC823A8A67600A34717 /* ZLBannerView.swift in Sources */,
 				35467EE523A8AF6400A34717 /* ZLRewardView.swift in Sources */,
@@ -821,7 +826,6 @@
 				35467EC323A8A67600A34717 /* ZLUniversal.swift in Sources */,
 				35467EDE23A8A84C00A34717 /* ZLHomeViewController.swift in Sources */,
 				3562B96523B20D1D0034222E /* ZLItemTitleCell.swift in Sources */,
-				35A69BC523B0B7DE00E0ECBB /* ZLItemHeadView.swift in Sources */,
 				35467ED023A8A67600A34717 /* ZLBaseNavigationController.swift in Sources */,
 				35467EC723A8A67600A34717 /* ZLInterstitial.swift in Sources */,
 				35467EC623A8A67600A34717 /* ZLConfigKey.swift in Sources */,
