@@ -14,10 +14,12 @@ class ZLItemViewCell: UITableViewCell {
 
     var disposeBag = DisposeBag()
     
-    typealias DelBlock = (ZLCircularItemModel) -> ()
+    typealias ItemViewCellBlock = (ZLCircularItemModel) -> ()
     
-    var delBlock: DelBlock?
-
+    var delBlock: ItemViewCellBlock?
+    
+    var polishingBlock: ItemViewCellBlock?
+    
     
     var model: ZLCircularItemModel? {
         didSet {
@@ -25,7 +27,7 @@ class ZLItemViewCell: UITableViewCell {
             if model?.probability == 0 {
                 probabilityTextField.text = ""
             }else{
-                probabilityTextField.text = String(format:"%.2f",model!.probability)
+                probabilityTextField.text = String(format:"%.0f",model!.probability)
             }
         }
     }
@@ -41,6 +43,7 @@ class ZLItemViewCell: UITableViewCell {
         bgView.addSubview(titleTextField)
         bgView.addSubview(probabilityTitleLabel)
         bgView.addSubview(probabilityTextField)
+        bgView.addSubview(polishingBtn)
         bgView.addSubview(delBtn)
         bgView.snp.makeConstraints { (make) in
             make.left.top.equalToSuperview().offset(autoSize(number: 10))
@@ -52,7 +55,6 @@ class ZLItemViewCell: UITableViewCell {
         }
         titleTextField.snp.makeConstraints { (make) in
             make.left.equalTo(titleLabel.snp.right).offset(autoSize(number: 10))
-            make.right.equalTo(delBtn.snp.left).offset(autoSize(number: -20))
             make.centerY.equalTo(titleLabel.snp.centerY)
             make.width.equalTo(probabilityTextField.snp.width)
         }
@@ -63,8 +65,13 @@ class ZLItemViewCell: UITableViewCell {
         }
         probabilityTextField.snp.makeConstraints { (make) in
             make.left.equalTo(probabilityTitleLabel.snp.right).offset(autoSize(number: 10))
-            make.right.equalTo(delBtn.snp.left).offset(autoSize(number: -20))
+            make.right.lessThanOrEqualTo(polishingBtn.snp.left).offset(autoSize(number: -20))
             make.centerY.equalTo(probabilityTitleLabel.snp.centerY)
+        }
+        polishingBtn.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 60, height: 30))
+            make.centerY.equalToSuperview()
+            make.right.equalTo(delBtn.snp.left).offset(autoSize(number: -15))
         }
         delBtn.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
@@ -102,6 +109,7 @@ class ZLItemViewCell: UITableViewCell {
         temp.textAlignment = .left
         temp.font = autoFont(font: 16)
         temp.placeholder = "请输入选项(必填)"
+        temp.keyboardType = .numberPad
         temp.rx.text.orEmpty.changed.subscribe(onNext: { (text) in
             print(text)
             if !text.isEmpty {
@@ -125,7 +133,8 @@ class ZLItemViewCell: UITableViewCell {
         temp.textColor = color_666666
         temp.textAlignment = .left
         temp.font = autoFont(font: 16)
-        temp.placeholder = "请输入概率,点击均分自动获取(必填)"
+        temp.placeholder = "点击均分自动获取(必填)"
+        temp.keyboardType = .numberPad
         temp.rx.text.orEmpty.changed.subscribe(onNext: { (text) in
             print(text)
             if !text.isEmpty {
@@ -146,6 +155,25 @@ class ZLItemViewCell: UITableViewCell {
         }.disposed(by: disposeBag)
         return temp
     }()
+    
+    lazy var polishingBtn: UIButton = {
+        let temp = UIButton()
+        temp.backgroundColor = color_ffffff
+        temp.setTitle("补齐", for: .normal)
+        temp.setTitleColor(color_333333, for: .normal)
+        temp.layer.cornerRadius = 8
+        temp.layer.masksToBounds = true
+        temp.layer.borderWidth = 1
+        temp.layer.borderColor = color_333333.cgColor
+        temp.rx.controlEvent(.touchUpInside).subscribe { (button) in
+            if self.polishingBlock != nil {
+                self.polishingBlock!(self.model!)
+            }
+        }.disposed(by: disposeBag)
+        return temp
+    }()
+    
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

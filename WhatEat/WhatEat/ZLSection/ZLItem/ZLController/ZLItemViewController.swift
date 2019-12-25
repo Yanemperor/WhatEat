@@ -28,6 +28,9 @@ class ZLItemViewController: ZLBaseTableViewController {
     
     func initUI() {
         setRightBarButtonItem(name: "nav_done", type: .image) {
+            if !self.vm.isSave() {
+                return
+            }
             self.vm.saveDB()
             if self.backBlock != nil {
                 self.backBlock!(self.vm.model?.id ?? 0)
@@ -35,7 +38,6 @@ class ZLItemViewController: ZLBaseTableViewController {
             self.navigationController?.popViewController(animated: true)
         }
         
-//        tableView.tableHeaderView = headView
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = autoSize(number: 50)
         tableView.register(ZLItemTitleCell.self, forCellReuseIdentifier: "ZLItemTitleCell")
@@ -79,6 +81,10 @@ extension ZLItemViewController {
             cell.model = self.vm.model?.items[indexPath.row]
             cell.delBlock = { model in
                 self.vm.removeItemData(model: model)
+                tableView.reloadData()
+            }
+            cell.polishingBlock = { model in
+                self.vm.polishingItemData(model: model)
                 tableView.reloadData()
             }
             cell.selectionStyle = .none

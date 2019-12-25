@@ -26,6 +26,7 @@ class ZLHomeViewController: ZLBaseViewController {
         vm.getCircular()
         vm.reloadBlock = {
             self.setNavTitle()
+            self.setcircularViewData()
         }
     }
     
@@ -121,7 +122,8 @@ class ZLHomeViewController: ZLBaseViewController {
         temp.layer.borderColor = color_333333.cgColor
         temp.rx.controlEvent(.touchUpInside).subscribe { (button) in
             let vc = ZLItemViewController()
-            vc.model = self.vm.circularModel
+            let tempModel: ZLCircularModel = ZLCircularModel.deserialize(from: self.vm.circularModel?.toJSONString()) ?? ZLCircularModel()
+            vc.model = tempModel
             vc.backBlock = { id in
                 self.vm.getCircular(id: id)
             }

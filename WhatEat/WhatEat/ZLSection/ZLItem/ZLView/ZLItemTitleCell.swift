@@ -93,7 +93,6 @@ class ZLItemTitleCell: UITableViewCell {
         temp.textAlignment = .left
         temp.font = autoFont(font: 16)
         temp.placeholder = "请输入标题(非必填)"
-        
         temp.rx.text.orEmpty.changed.subscribe(onNext: { (text) in
             print(text)
             if !text.isEmpty {

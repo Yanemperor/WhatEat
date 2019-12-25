@@ -43,7 +43,7 @@ class ZLCircularViewModel: ZLBaseViewModel {
             let item: ZLCircularItemModel = ZLCircularItemModel()
             item.title = itemTitle
             item.probability = 16.6
-            item.uiSize = 16.6
+            item.uiSize = 100
             items.append(item)
         }
         model.items = items

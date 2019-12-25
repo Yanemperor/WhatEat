@@ -47,16 +47,20 @@ class ZLCircularView: UIView {
         }
         baseView.layer.cornerRadius = (radius + radius * 1.5) * sqrt(2) / 2.0
         centerPoint = CGPoint.init(x: frame.size.width/2.0, y: frame.size.height/2.0)
-        startAngle = Float(CGFloat.pi / 2.0) - 2 * .pi / Float(dataSource.count) / 2
-        
-        allValue = 0
-        for index in 0...dataSource.count-1 {
-            let value = dataSource[index]
-            allValue = allValue+(value.uiSize)
+        if dataSource.count % 2 == 0{
+            startAngle = Float(CGFloat.pi / 2.0) - 2 * .pi / Float(dataSource.count) / 2
+        }else{
+            startAngle = Float(CGFloat.pi / 2.0)
         }
+        allValue = 0
+//        for index in 0...dataSource.count-1 {
+//            allValue = allValue+Float(layerWidth)
+//        }
+        
+        allValue = Float(layerWidth) * Float(dataSource.count)
         
         //for循环画图
-        for index in 0...dataSource.count-1 {
+        for index in 0..<dataSource.count {
             bezierPaint(index: index)
         }
         
@@ -68,13 +72,18 @@ class ZLCircularView: UIView {
             view.removeFromSuperview()
         }
         
-        for index in 0...dataSource.count-1 {
+        for index in 0..<dataSource.count {
             let model = dataSource[index]
-            let frame = CGRect(x: 0,
+            var frame = CGRect(x: 0,
                                y: 0,
                                width: self.bounds.width / 2 * sin(2 * CGFloat.pi / CGFloat(dataSource.count)),
                                height: self.bounds.height)
-            
+            if dataSource.count <= 2 {
+                frame = CGRect(x: 0,
+                y: 0,
+                width: 50,
+                height: self.bounds.height)
+            }
             let awardView = ZLAwardView(frame: frame)
             awardView.layer.anchorPoint = CGPoint(x: 0.5, y: 1);
             awardView.center = CGPoint(x: self.bounds.width / 2,
@@ -93,7 +102,7 @@ class ZLCircularView: UIView {
     //贝塞尔和CASherLayer画图
     func bezierPaint(index:Int) {
         
-        let targetValue = dataSource[index].uiSize
+        let targetValue = Float(layerWidth)
         let ratioString = String(format: "%.5f", targetValue/Float(allValue))
         
         endAngle = startAngle + (Float(ratioString)!)*2*Float(Double.pi)
@@ -111,11 +120,37 @@ class ZLCircularView: UIView {
         outLayer.strokeColor = colors[index % colors.count].cgColor
         outLayer.path = bezierOutPath.cgPath
         bgView.layer.addSublayer(outLayer)
-        let start = dataSource[index].uiSize
+        let start = Float(layerWidth)
         let scaleString = String(format: "%.5f", start/Float(allValue))
         startAngle = startAngle+(Float(scaleString)!-1)*2*Float(Double.pi)
         outBezerArrs.append(bezierOutPath)
         outLayers.append(outLayer)
+    }
+    
+    func randomResults() -> Int {
+        var randomResults: Int = 0
+        // 0~100 随机出来的数
+        let random = arc4random() % UInt32(100)
+        
+        var intervals: Array<Float> = []
+        var tempInterval: Float = 0
+        
+        // 获取区间
+        for itemModel in dataSource {
+            var interval: Float = itemModel.probability
+            interval += tempInterval
+            intervals.append(interval)
+            tempInterval = interval
+        }
+        // 判断在哪个区间
+        for index in 0..<intervals.count {
+            if random < UInt32(intervals[index]) {
+                randomResults = index
+                break
+            }
+        }
+        print(randomResults)
+        return randomResults
     }
     
     func fanRotationAnim(rotationView: UIView) -> Void {
@@ -129,7 +164,8 @@ class ZLCircularView: UIView {
         rotationAnim.fromValue = rotatingAngle // 开始角度
         // 结束的角度
         // 随机到的结果
-        let random = arc4random() % UInt32(dataSource.count)
+//        let random = arc4random() % UInt32(dataSource.count)
+        let random = randomResults()
         resultItemModel = dataSource[Int(random)]
         print("结果" + "\(random)")
         
