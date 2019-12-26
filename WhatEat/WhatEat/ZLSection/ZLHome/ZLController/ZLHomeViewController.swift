@@ -25,9 +25,13 @@ class ZLHomeViewController: ZLBaseViewController {
     func initData() {
         vm.getCircular()
         vm.reloadBlock = {
-            self.setNavTitle()
-            self.setcircularViewData()
+            self.reload()
         }
+    }
+    
+    func reload() {
+        self.setNavTitle()
+        self.setcircularViewData()
     }
     
     func setNavTitle() {
@@ -42,7 +46,7 @@ class ZLHomeViewController: ZLBaseViewController {
     
     func initUI() {
         setNavTitle()
-        navTitle(title: "吃啥呀？")
+//        navTitle(title: "吃啥呀？")
         setRightBarButtonItem(name: "nav_set", type: .image) {
             let vc = ZLSetViewController()
             self.navigationController?.pushViewController(vc, animated: true)
@@ -103,7 +107,7 @@ class ZLHomeViewController: ZLBaseViewController {
         temp.size = CGSize(width: autoSize(number: 180), height: autoSize(number: 180))
         temp.centerX = self.view.centerX
         temp.centerY = self.view.centerY - 100
-        temp.dataSource = vm.circularModel!.items
+        temp.dataSource = vm.circularModel?.items ?? []
         temp.drawPieChartView()
         temp.resultBlock = { item in
             self.resultView.setCircularItemModel(model: item)
@@ -143,6 +147,10 @@ class ZLHomeViewController: ZLBaseViewController {
         temp.layer.borderColor = color_333333.cgColor
         temp.rx.controlEvent(.touchUpInside).subscribe { (button) in
             let vc = ZLOtherViewController()
+            vc.backBlock = { model in
+                self.vm.circularModel = model
+                self.reload()
+            }
             self.navigationController?.pushViewController(vc, animated: true)
         }.disposed(by: disposeBag)
         return temp

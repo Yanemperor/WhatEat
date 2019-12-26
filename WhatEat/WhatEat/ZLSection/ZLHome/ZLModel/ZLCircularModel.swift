@@ -12,7 +12,7 @@ import WCDBSwift
 class ZLCircularModel: ZLBaseModel, TableCodable {
     var id: Int = 0
     var title: String?
-    var type: Int = 0
+    var type: Bool = true
     var items: Array<ZLCircularItemModel> = []
     
     enum CodingKeys: String, CodingTableKey {
@@ -22,7 +22,15 @@ class ZLCircularModel: ZLBaseModel, TableCodable {
         case title
         case type
         case items
+        
+        static var columnConstraintBindings: [CodingKeys: ColumnConstraintBinding]? {
+            return [
+                id: ColumnConstraintBinding(isPrimary: true),
+            ]
+        }
     }
     
+//    var isAutoIncrement: Bool = true // 用于定义是否使用自增的方式插入
+//    var lastInsertedRowID: Int64 = 0 // 用于获取自增插入后的主键值
 }
 

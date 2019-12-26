@@ -70,6 +70,14 @@ extension ZLDataBase {
         }
     }
     
+    func insertOrReplaceCircularTable(model: ZLCircularModel) {
+        do {
+            try dataBase?.insertOrReplace(objects: model, intoTable: ZLTableKey.circularTable)
+        } catch {
+            print("####转盘表插入失败####")
+        }
+    }
+    
     func updateCircularTable(model: ZLCircularModel) {
         do {
 //            try dataBase?.update(table: ZLTableKey.circularTable, on: ZLCircularModel.Properties.id, with: model)

@@ -23,10 +23,18 @@ class ZLItemViewController: ZLBaseTableViewController {
     }
     
     func initData() {
-        vm.model = model
+        if model == nil {
+            let tempModel = ZLCircularModel()
+            tempModel.id = (ZLDataBase.shared.getCircularTable()?.last?.id ?? 2) + 1
+            vm.model = tempModel
+        }else{
+            vm.model = model
+        }
+        vm.isHiddenPolishing = model?.type ?? true
     }
     
     func initUI() {
+        navTitle(title: "选项")
         setRightBarButtonItem(name: "nav_done", type: .image) {
             if !self.vm.isSave() {
                 return
@@ -68,7 +76,8 @@ extension ZLItemViewController {
             let cell: ZLItemTitleCell = tableView.dequeueReusableCell(withIdentifier: "ZLItemTitleCell", for: indexPath) as! ZLItemTitleCell
             cell.model = self.vm.model
             cell.selectionStyle = .none
-            cell.reloadBlock = {
+            cell.divideBlock = { on in
+                self.vm.isOpenDivide(on: on)
                 tableView.reloadData()
             }
             return cell
@@ -79,6 +88,7 @@ extension ZLItemViewController {
         }else{
             let cell: ZLItemViewCell = tableView.dequeueReusableCell(withIdentifier: "ZLItemViewCell", for: indexPath) as! ZLItemViewCell
             cell.model = self.vm.model?.items[indexPath.row]
+            cell.isHiddenPolishing(hidden: self.vm.isHiddenPolishing)
             cell.delBlock = { model in
                 self.vm.removeItemData(model: model)
                 tableView.reloadData()
@@ -96,6 +106,7 @@ extension ZLItemViewController {
         if indexPath.section == 2 {
             let tempModel = ZLCircularItemModel()
             self.vm.model?.items.append(tempModel)
+            self.vm.divideProbability()
             tableView.reloadData()
         }
     }

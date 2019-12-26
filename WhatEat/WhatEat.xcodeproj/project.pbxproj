@@ -51,6 +51,13 @@
 		3562B96523B20D1D0034222E /* ZLItemTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B96423B20D1D0034222E /* ZLItemTitleCell.swift */; };
 		3562B96723B2F9E40034222E /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B96623B2F9E40034222E /* UITextField+Extension.swift */; };
 		3562B96923B309150034222E /* ZLItemFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B96823B309150034222E /* ZLItemFooterCell.swift */; };
+		3562B96B23B461100034222E /* ZLOtherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B96A23B461100034222E /* ZLOtherViewModel.swift */; };
+		3562B96D23B464680034222E /* ZLOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B96C23B464680034222E /* ZLOtherCell.swift */; };
+		3562B96F23B495020034222E /* ZLSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B96E23B495020034222E /* ZLSetViewModel.swift */; };
+		3562B97123B495830034222E /* ZLSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B97023B495830034222E /* ZLSetCell.swift */; };
+		3562B97823B49CC70034222E /* ZLAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B97423B49CC60034222E /* ZLAboutViewController.swift */; };
+		3562B97B23B4A7310034222E /* ZLSystemShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B97A23B4A7310034222E /* ZLSystemShare.swift */; };
+		3562B97D23B4A74C0034222E /* ZLActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562B97C23B4A74C0034222E /* ZLActivity.swift */; };
 		35A69BB723B0928600E0ECBB /* ZLSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BB623B0928600E0ECBB /* ZLSetViewController.swift */; };
 		35A69BB923B0929500E0ECBB /* ZLOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BB823B0929500E0ECBB /* ZLOtherViewController.swift */; };
 		35A69BBB23B092A100E0ECBB /* ZLItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69BBA23B092A100E0ECBB /* ZLItemViewController.swift */; };
@@ -131,6 +138,13 @@
 		3562B96423B20D1D0034222E /* ZLItemTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemTitleCell.swift; sourceTree = "<group>"; };
 		3562B96623B2F9E40034222E /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		3562B96823B309150034222E /* ZLItemFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemFooterCell.swift; sourceTree = "<group>"; };
+		3562B96A23B461100034222E /* ZLOtherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLOtherViewModel.swift; sourceTree = "<group>"; };
+		3562B96C23B464680034222E /* ZLOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLOtherCell.swift; sourceTree = "<group>"; };
+		3562B96E23B495020034222E /* ZLSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSetViewModel.swift; sourceTree = "<group>"; };
+		3562B97023B495830034222E /* ZLSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSetCell.swift; sourceTree = "<group>"; };
+		3562B97423B49CC60034222E /* ZLAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLAboutViewController.swift; sourceTree = "<group>"; };
+		3562B97A23B4A7310034222E /* ZLSystemShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSystemShare.swift; sourceTree = "<group>"; };
+		3562B97C23B4A74C0034222E /* ZLActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLActivity.swift; sourceTree = "<group>"; };
 		35A69BB623B0928600E0ECBB /* ZLSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSetViewController.swift; sourceTree = "<group>"; };
 		35A69BB823B0929500E0ECBB /* ZLOtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLOtherViewController.swift; sourceTree = "<group>"; };
 		35A69BBA23B092A100E0ECBB /* ZLItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLItemViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +290,7 @@
 		35467E8C23A8A67600A34717 /* ZLShared */ = {
 			isa = PBXGroup;
 			children = (
+				3562B97923B4A71E0034222E /* ZLSystemShare */,
 				35467E8D23A8A67600A34717 /* ZLGlobalTimer */,
 				35467E8F23A8A67600A34717 /* ZLJSONParser */,
 				35467E9123A8A67600A34717 /* ZLUserInfo */,
@@ -482,6 +497,56 @@
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
+		3562B97223B49CC60034222E /* ZLAbout */ = {
+			isa = PBXGroup;
+			children = (
+				3562B97323B49CC60034222E /* ZLController */,
+				3562B97523B49CC60034222E /* ZLModel */,
+				3562B97623B49CC60034222E /* ZLViewModel */,
+				3562B97723B49CC60034222E /* ZLView */,
+			);
+			name = ZLAbout;
+			path = WhatEat/ZLSection/ZLAbout;
+			sourceTree = SOURCE_ROOT;
+		};
+		3562B97323B49CC60034222E /* ZLController */ = {
+			isa = PBXGroup;
+			children = (
+				3562B97423B49CC60034222E /* ZLAboutViewController.swift */,
+			);
+			path = ZLController;
+			sourceTree = "<group>";
+		};
+		3562B97523B49CC60034222E /* ZLModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLModel;
+			sourceTree = "<group>";
+		};
+		3562B97623B49CC60034222E /* ZLViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLViewModel;
+			sourceTree = "<group>";
+		};
+		3562B97723B49CC60034222E /* ZLView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZLView;
+			sourceTree = "<group>";
+		};
+		3562B97923B4A71E0034222E /* ZLSystemShare */ = {
+			isa = PBXGroup;
+			children = (
+				3562B97A23B4A7310034222E /* ZLSystemShare.swift */,
+				3562B97C23B4A74C0034222E /* ZLActivity.swift */,
+			);
+			path = ZLSystemShare;
+			sourceTree = "<group>";
+		};
 		35A69BA723B0922300E0ECBB /* ZLSet */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,6 +576,7 @@
 		35A69BAA23B0922300E0ECBB /* ZLViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3562B96E23B495020034222E /* ZLSetViewModel.swift */,
 			);
 			path = ZLViewModel;
 			sourceTree = "<group>";
@@ -518,6 +584,7 @@
 		35A69BAB23B0922300E0ECBB /* ZLView */ = {
 			isa = PBXGroup;
 			children = (
+				3562B97023B495830034222E /* ZLSetCell.swift */,
 			);
 			path = ZLView;
 			sourceTree = "<group>";
@@ -525,6 +592,7 @@
 		35A69BAC23B0926600E0ECBB /* ZLItem */ = {
 			isa = PBXGroup;
 			children = (
+				3562B97223B49CC60034222E /* ZLAbout */,
 				35A69BAD23B0926600E0ECBB /* ZLController */,
 				35A69BAE23B0926600E0ECBB /* ZLModel */,
 				35A69BAF23B0926600E0ECBB /* ZLViewModel */,
@@ -595,6 +663,7 @@
 		35A69BB423B0926600E0ECBB /* ZLViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3562B96A23B461100034222E /* ZLOtherViewModel.swift */,
 			);
 			path = ZLViewModel;
 			sourceTree = "<group>";
@@ -602,6 +671,7 @@
 		35A69BB523B0926600E0ECBB /* ZLView */ = {
 			isa = PBXGroup;
 			children = (
+				3562B96C23B464680034222E /* ZLOtherCell.swift */,
 			);
 			path = ZLView;
 			sourceTree = "<group>";
@@ -790,11 +860,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3562B96D23B464680034222E /* ZLOtherCell.swift in Sources */,
 				35467EB623A8A67600A34717 /* UIColor+Extension.swift in Sources */,
 				35A69BBD23B099A600E0ECBB /* ZLCircularModel.swift in Sources */,
 				35A69BB723B0928600E0ECBB /* ZLSetViewController.swift in Sources */,
 				35A69BB923B0929500E0ECBB /* ZLOtherViewController.swift in Sources */,
 				3562B96723B2F9E40034222E /* UITextField+Extension.swift in Sources */,
+				3562B96F23B495020034222E /* ZLSetViewModel.swift in Sources */,
 				3562B96923B309150034222E /* ZLItemFooterCell.swift in Sources */,
 				35467E5223A8A56700A34717 /* ViewController.swift in Sources */,
 				35467EC823A8A67600A34717 /* ZLBannerView.swift in Sources */,
@@ -804,7 +876,9 @@
 				35A69BC923B1A1DA00E0ECBB /* ZLItemViewCell.swift in Sources */,
 				35467EBF23A8A67600A34717 /* ZLUserInfo.swift in Sources */,
 				35467ED123A8A67600A34717 /* ZLBaseTableViewController.swift in Sources */,
+				3562B97123B495830034222E /* ZLSetCell.swift in Sources */,
 				35A69BC323B0AC9700E0ECBB /* ZLResultView.swift in Sources */,
+				3562B97823B49CC70034222E /* ZLAboutViewController.swift in Sources */,
 				35467ED523A8A67600A34717 /* ZLBaseViewModel.swift in Sources */,
 				35467ED323A8A67600A34717 /* ZLBaseTabBarController.swift in Sources */,
 				35A69BC123B0A06200E0ECBB /* ZLCircularViewModel.swift in Sources */,
@@ -826,15 +900,18 @@
 				35467EC323A8A67600A34717 /* ZLUniversal.swift in Sources */,
 				35467EDE23A8A84C00A34717 /* ZLHomeViewController.swift in Sources */,
 				3562B96523B20D1D0034222E /* ZLItemTitleCell.swift in Sources */,
+				3562B97B23B4A7310034222E /* ZLSystemShare.swift in Sources */,
 				35467ED023A8A67600A34717 /* ZLBaseNavigationController.swift in Sources */,
 				35467EC723A8A67600A34717 /* ZLInterstitial.swift in Sources */,
 				35467EC623A8A67600A34717 /* ZLConfigKey.swift in Sources */,
 				35467EBB23A8A67600A34717 /* UIScrollView+Extension.swift in Sources */,
+				3562B97D23B4A74C0034222E /* ZLActivity.swift in Sources */,
 				35467EC223A8A67600A34717 /* ZLColor.swift in Sources */,
 				35467EC123A8A67600A34717 /* ZLNotification.swift in Sources */,
 				35A69BBB23B092A100E0ECBB /* ZLItemViewController.swift in Sources */,
 				35467EE123A8ADFB00A34717 /* ZLAwardView.swift in Sources */,
 				35467EC423A8A67600A34717 /* ZLTableKey.swift in Sources */,
+				3562B96B23B461100034222E /* ZLOtherViewModel.swift in Sources */,
 				35A69BC723B0B9C400E0ECBB /* ZLItemViewModel.swift in Sources */,
 				35467EC023A8A67600A34717 /* ZLVersionUpdate.swift in Sources */,
 				35467ED423A8A67600A34717 /* ZLBaseModel.swift in Sources */,

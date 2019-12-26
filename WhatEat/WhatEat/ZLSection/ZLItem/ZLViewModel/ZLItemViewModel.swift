@@ -11,9 +11,10 @@ import UIKit
 class ZLItemViewModel: ZLBaseViewModel {
     var model: ZLCircularModel?
     
+    var isHiddenPolishing: Bool = true
+    
     func saveDB() {
-        ZLDataBase.shared.deleteCircularTable(model: model!)
-        ZLDataBase.shared.insertCircularTable(array: [model!])
+        ZLDataBase.shared.insertOrReplaceCircularTable(model: model!)
     }
     
     func removeItemData(model: ZLCircularItemModel) {
@@ -25,7 +26,9 @@ class ZLItemViewModel: ZLBaseViewModel {
             let results: Bool = (tempModel === model)
             return results
         })
-
+        if isHiddenPolishing {
+            divideProbability()
+        }
     }
     
     func polishingItemData(model: ZLCircularItemModel) {
@@ -40,8 +43,27 @@ class ZLItemViewModel: ZLBaseViewModel {
         model.probability = 100 - allProbability
     }
     
+    func isOpenDivide(on: Bool) {
+        if on {
+            model?.type = true
+            divideProbability()
+        }else{
+            model?.type = false
+        }
+        isHiddenPolishing = model?.type ?? true
+    }
+    
+    // 均分概率
+    func divideProbability() {
+        let divide: Float = Float(100.0 / Double(model?.items.count ?? 1))
+        for index in model?.items ?? [] {
+            index.probability = divide
+        }
+    }
+    
     func isSave() -> Bool {
         if model?.items.count ?? 1 <= 1 {
+            ZLHUD.show(text: "选项最少为两项!", type: .warning)
             return false
         }
         for itemModel in model!.items {
@@ -58,6 +80,16 @@ class ZLItemViewModel: ZLBaseViewModel {
                 return false
             }
         }
+        
+        var allProbability: Float = 0
+        for itemModel in self.model!.items {
+            allProbability += itemModel.probability
+        }
+        if allProbability > 100 {
+            ZLHUD.show(text: "概率之和不能大于100", type: .warning)
+            return false
+        }
+        
         return true
     }
 }

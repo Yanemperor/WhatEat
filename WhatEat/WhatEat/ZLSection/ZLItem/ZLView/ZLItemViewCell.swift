@@ -32,6 +32,19 @@ class ZLItemViewCell: UITableViewCell {
         }
     }
     
+    func isHiddenPolishing(hidden: Bool) {
+        polishingBtn.isHidden = hidden
+        if hidden {
+            probabilityTextField.isUserInteractionEnabled = false
+            probabilityTextField.textColor = color_999999
+            probabilityTitleLabel.textColor = color_999999
+        }else{
+            probabilityTextField.isUserInteractionEnabled = true
+            probabilityTitleLabel.textColor = color_333333
+            probabilityTextField.textColor = color_666666
+        }
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         initUI()
@@ -109,7 +122,6 @@ class ZLItemViewCell: UITableViewCell {
         temp.textAlignment = .left
         temp.font = autoFont(font: 16)
         temp.placeholder = "请输入选项(必填)"
-        temp.keyboardType = .numberPad
         temp.rx.text.orEmpty.changed.subscribe(onNext: { (text) in
             print(text)
             if !text.isEmpty {

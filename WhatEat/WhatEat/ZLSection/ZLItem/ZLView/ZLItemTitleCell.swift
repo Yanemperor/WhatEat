@@ -14,24 +14,17 @@ class ZLItemTitleCell: UITableViewCell {
     
     var disposeBag = DisposeBag()
     
-    typealias ReloadBlock = () -> ()
+    typealias DivideBlock = (Bool) -> ()
     
-    var reloadBlock: ReloadBlock?
+    var divideBlock: DivideBlock?
 
+    
     
     var model: ZLCircularModel? {
         didSet {
             titleTextField.text = model?.title
-        }
-    }
-    
-    func divideBtnClick() {
-        let divide: Float = Float(100.0 / Double(model?.items.count ?? 1))
-        for index in model?.items ?? [] {
-            index.probability = divide
-        }
-        if reloadBlock != nil {
-            reloadBlock!()
+            divideSwitch.isOn = model?.type ?? true
+            
         }
     }
     
@@ -44,27 +37,28 @@ class ZLItemTitleCell: UITableViewCell {
         contentView.addSubview(bgView)
         bgView.addSubview(titleLabel)
         bgView.addSubview(titleTextField)
-        contentView.addSubview(divideBtn)
+        bgView.addSubview(divideTitleLabel)
+        contentView.addSubview(divideSwitch)
         bgView.snp.makeConstraints { (make) in
             make.top.left.equalToSuperview().offset(autoSize(number: 10))
-            make.bottom.equalToSuperview().offset(autoSize(number: -10))
-            make.right.equalTo(divideBtn.snp.left).offset(autoSize(number: -10))
+            make.bottom.right.equalToSuperview().offset(autoSize(number: -10))
         }
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(autoSize(number: 10))
             make.left.equalToSuperview().offset(autoSize(number: 15))
-            make.bottom.equalToSuperview().offset(autoSize(number: -10))
-            make.centerY.equalToSuperview()
         }
         titleTextField.snp.makeConstraints { (make) in
             make.left.equalTo(titleLabel.snp.right).offset(autoSize(number: 10))
             make.centerY.equalTo(titleLabel.snp.centerY)
         }
-        divideBtn.snp.makeConstraints { (make) in
-            make.width.equalTo(autoSize(number: 60))
-            make.height.equalTo(bgView.snp.height)
-            make.centerY.equalToSuperview()
-            make.right.equalToSuperview().offset(autoSize(number: -15))
+        divideTitleLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(autoSize(number: 15))
+            make.top.equalTo(titleLabel.snp.bottom).offset(autoSize(number: 10))
+            make.bottom.equalToSuperview().offset(autoSize(number: -10))
+        }
+        divideSwitch.snp.makeConstraints { (make) in
+            make.centerY.equalTo(divideTitleLabel.snp.centerY)
+            make.right.equalTo(bgView.snp.right).offset(autoSize(number: -15))
         }
     }
     
@@ -104,18 +98,22 @@ class ZLItemTitleCell: UITableViewCell {
         return temp
     }()
     
-    lazy var divideBtn: UIButton = {
-        let temp = UIButton()
-        temp.backgroundColor = color_ffffff
-        temp.setTitle("均分", for: .normal)
-        temp.setTitleColor(color_333333, for: .normal)
-        temp.layer.cornerRadius = 8
-        temp.layer.masksToBounds = true
-        temp.layer.borderWidth = 1
-        temp.layer.borderColor = color_333333.cgColor
-        temp.rx.controlEvent(.touchUpInside).subscribe { (button) in
-            self.divideBtnClick()
-        }.disposed(by: disposeBag)
+    lazy var divideTitleLabel: UILabel = {
+        let temp = UILabel()
+        temp.text = "是否均分"
+        temp.textColor = color_333333
+        temp.textAlignment = .left
+        temp.font = autoFont(font: 16)
+        return temp
+    }()
+    
+    lazy var divideSwitch: UISwitch = {
+        let temp = UISwitch()
+        temp.rx.isOn.asObservable().subscribe(onNext: { (bool) in
+            if self.divideBlock != nil {
+                self.divideBlock!(bool)
+            }
+        }).disposed(by: disposeBag)
         return temp
     }()
     
