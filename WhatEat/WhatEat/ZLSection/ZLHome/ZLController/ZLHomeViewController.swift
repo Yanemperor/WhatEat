@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ZLHomeViewController: ZLBaseViewController {
 
@@ -110,6 +111,7 @@ class ZLHomeViewController: ZLBaseViewController {
         temp.dataSource = vm.circularModel?.items ?? []
         temp.drawPieChartView()
         temp.resultBlock = { item in
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             self.resultView.setCircularItemModel(model: item)
         }
         return temp

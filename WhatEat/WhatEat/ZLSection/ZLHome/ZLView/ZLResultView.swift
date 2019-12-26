@@ -26,6 +26,7 @@ class ZLResultView: UIView {
         self.addSubview(bgView)
         bgView.addSubview(imageView)
         bgView.addSubview(titleLabel)
+        bgView.addSubview(bannerView)
         bgColorView.snp.makeConstraints { (make) in
             make.top.right.bottom.left.equalToSuperview()
         }
@@ -33,7 +34,7 @@ class ZLResultView: UIView {
             make.left.equalToSuperview().offset(autoSize(number: 15))
             make.right.equalToSuperview().offset(autoSize(number: -15))
             make.center.equalToSuperview()
-            make.height.equalTo(autoSize(number: 240))
+            make.height.equalTo(autoSize(number: 300))
         }
         imageView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(autoSize(number: 20))
@@ -41,9 +42,18 @@ class ZLResultView: UIView {
         }
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(imageView.snp.bottom).offset(autoSize(number: 10))
-            make.centerX.equalToSuperview()
+            make.left.equalToSuperview().offset(autoSize(number: 15))
+            make.right.equalToSuperview().offset(autoSize(number: -15))
+            make.height.equalTo(autoSize(number: 30))
         }
         
+        bannerView.snp.makeConstraints { (make) in
+            make.top.equalTo(titleLabel.snp.bottom).offset(autoSize(number: 20))
+            make.left.equalToSuperview().offset(autoSize(number: 10))
+            make.right.equalToSuperview().offset(autoSize(number: -10))
+            make.bottom.equalToSuperview().offset(autoSize(number: -10))
+        }
+
         
     }
     
@@ -78,7 +88,12 @@ class ZLResultView: UIView {
         temp.backgroundColor = color_ffffff
         temp.textColor = color_333333
         temp.textAlignment = .center
-        temp.font = autoFont(font: 16)
+        temp.font = autoFont(font: 22)
+        return temp
+    }()
+    
+    lazy var bannerView: ZLBannerView = {
+        let temp = ZLBannerView()
         return temp
     }()
         
