@@ -181,7 +181,7 @@ class ZLCircularView: UIView {
         
         rotatingAngle = 2 * CGFloat.pi - CGFloat(random) * singleAngle
         print("旋转角度" + "\(rotatingAngle)")
-        rotationAnim.toValue = rotatingAngle + repeatCount * .pi * 2
+        rotationAnim.toValue = rotatingAngle + repeatCount * .pi * 4
         
         
         
@@ -249,7 +249,6 @@ class ZLCircularView: UIView {
         lazy var button: UIButton = {
             let temp = UIButton()
             temp.setBackgroundImage(UIImage(named: "circular_pointer"), for: .normal)
-    //        temp.setImage(UIImage(named: "circular_pointer"), for: .normal)
             temp.setTitle("开始", for: .normal)
             temp.setTitleColor(color_333333, for: .normal)
             temp.titleLabel?.font = autoFont(font: 16)

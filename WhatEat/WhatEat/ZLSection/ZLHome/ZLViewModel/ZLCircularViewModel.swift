@@ -14,7 +14,7 @@ class ZLCircularViewModel: ZLBaseViewModel {
 
     var circularModel: ZLCircularModel?
     var allCircularModels: Array<ZLCircularModel> = []
-    
+        
     var itemTitle: Array<String> = ["火锅","炒菜","饺子","炒饭","粥","面条"]
     var itemTitle1: Array<String> = ["北京","上海","广州","深圳","杭州","武汉"]
     var itemTitle2: Array<String> = ["爬山","散步","逛街","玩游戏","刷剧","看电影"]

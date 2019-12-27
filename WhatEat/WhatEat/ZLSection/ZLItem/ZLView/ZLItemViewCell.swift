@@ -38,10 +38,20 @@ class ZLItemViewCell: UITableViewCell {
             probabilityTextField.isUserInteractionEnabled = false
             probabilityTextField.textColor = color_999999
             probabilityTitleLabel.textColor = color_999999
+            probabilityTextField.snp.remakeConstraints { (make) in
+                make.left.equalTo(probabilityTitleLabel.snp.right).offset(autoSize(number: 10))
+                make.right.equalTo(delBtn.snp.left).offset(autoSize(number: -10))
+                make.centerY.equalTo(probabilityTitleLabel.snp.centerY)
+            }
         }else{
             probabilityTextField.isUserInteractionEnabled = true
             probabilityTitleLabel.textColor = color_333333
             probabilityTextField.textColor = color_666666
+            probabilityTextField.snp.remakeConstraints { (make) in
+                make.left.equalTo(probabilityTitleLabel.snp.right).offset(autoSize(number: 10))
+                make.right.equalTo(polishingBtn.snp.left).offset(autoSize(number: -5))
+                make.centerY.equalTo(probabilityTitleLabel.snp.centerY)
+            }
         }
     }
     
@@ -62,23 +72,30 @@ class ZLItemViewCell: UITableViewCell {
             make.left.top.equalToSuperview().offset(autoSize(number: 10))
             make.bottom.right.equalToSuperview().offset(autoSize(number: -10))
         }
+        delBtn.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview()
+            make.right.equalToSuperview().offset(autoSize(number: -15))
+            make.size.equalTo(CGSize(width: autoSize(number: 26), height: autoSize(number: 26)))
+        }
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(autoSize(number: 10))
             make.left.equalToSuperview().offset(autoSize(number: 15))
+            make.width.equalTo(autoSize(number: 40))
         }
         titleTextField.snp.makeConstraints { (make) in
             make.left.equalTo(titleLabel.snp.right).offset(autoSize(number: 10))
             make.centerY.equalTo(titleLabel.snp.centerY)
-//            make.width.equalTo(probabilityTextField.snp.width)
+            make.width.equalTo(probabilityTextField.snp.width)
         }
         probabilityTitleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(autoSize(number: 10))
             make.left.equalToSuperview().offset(autoSize(number: 15))
             make.bottom.equalToSuperview().offset(autoSize(number: -10))
+            make.width.equalTo(autoSize(number: 40))
         }
         probabilityTextField.snp.makeConstraints { (make) in
             make.left.equalTo(probabilityTitleLabel.snp.right).offset(autoSize(number: 10))
-            make.right.equalTo(polishingBtn.snp.left).offset(autoSize(number: -5))
+            make.right.equalTo(delBtn.snp.left).offset(autoSize(number: -15))
             make.centerY.equalTo(probabilityTitleLabel.snp.centerY)
         }
         polishingBtn.snp.makeConstraints { (make) in
@@ -86,15 +103,12 @@ class ZLItemViewCell: UITableViewCell {
             make.centerY.equalToSuperview()
             make.right.equalTo(delBtn.snp.left).offset(autoSize(number: -15))
         }
-        delBtn.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.right.equalToSuperview().offset(autoSize(number: -15))
-        }
+        
 //        titleLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: NSLayoutConstraint.Axis.horizontal)
 //        titleTextField.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
 
-        probabilityTitleLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: NSLayoutConstraint.Axis.horizontal)
-        probabilityTextField.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
+//        probabilityTitleLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: NSLayoutConstraint.Axis.horizontal)
+//        probabilityTextField.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
     }
     
     lazy var bgView: UIView = {

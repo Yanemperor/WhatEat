@@ -49,6 +49,10 @@ class ZLHomeViewController: ZLBaseViewController {
         setNavTitle()
 //        navTitle(title: "吃啥呀？")
         setRightBarButtonItem(name: "nav_set", type: .image) {
+            // 如果在旋转就不允许点击
+            if !self.circularView.button.isUserInteractionEnabled {
+                return
+            }
             let vc = ZLSetViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -111,7 +115,9 @@ class ZLHomeViewController: ZLBaseViewController {
         temp.dataSource = vm.circularModel?.items ?? []
         temp.drawPieChartView()
         temp.resultBlock = { item in
-            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            let feedbackGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: UIImpactFeedbackGenerator.FeedbackStyle.heavy)
+            feedbackGenerator.prepare()
+            feedbackGenerator.impactOccurred()
             self.resultView.setCircularItemModel(model: item)
         }
         return temp
@@ -127,6 +133,10 @@ class ZLHomeViewController: ZLBaseViewController {
         temp.layer.borderWidth = 1
         temp.layer.borderColor = color_333333.cgColor
         temp.rx.controlEvent(.touchUpInside).subscribe { (button) in
+            // 如果在旋转就不允许点击
+            if !self.circularView.button.isUserInteractionEnabled {
+                return
+            }
             let vc = ZLItemViewController()
             let tempModel: ZLCircularModel = ZLCircularModel.deserialize(from: self.vm.circularModel?.toJSONString()) ?? ZLCircularModel()
             vc.model = tempModel
@@ -148,6 +158,10 @@ class ZLHomeViewController: ZLBaseViewController {
         temp.layer.borderWidth = 1
         temp.layer.borderColor = color_333333.cgColor
         temp.rx.controlEvent(.touchUpInside).subscribe { (button) in
+            // 如果在旋转就不允许点击
+            if !self.circularView.button.isUserInteractionEnabled {
+                return
+            }
             let vc = ZLOtherViewController()
             vc.backBlock = { model in
                 self.vm.circularModel = model
