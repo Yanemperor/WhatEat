@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = getRootVC()
         window?.makeKeyAndVisible()
         IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "完成"
         initAdvertising()
 //        loadAdTimer()
         ZLDataBase.shared.createDB()

@@ -67,7 +67,11 @@ extension ZLSetViewController {
             }
         }else if title == "分享" {
             shareAction()
-        }else if title == "关于我" {
+        }else if title == "推荐" {
+            let vc = ZLRecommendedViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        else if title == "关于我" {
             let vc = ZLAboutViewController()
             navigationController?.pushViewController(vc, animated: true)
         }

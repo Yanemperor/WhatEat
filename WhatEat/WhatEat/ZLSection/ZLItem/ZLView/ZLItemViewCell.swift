@@ -69,7 +69,7 @@ class ZLItemViewCell: UITableViewCell {
         titleTextField.snp.makeConstraints { (make) in
             make.left.equalTo(titleLabel.snp.right).offset(autoSize(number: 10))
             make.centerY.equalTo(titleLabel.snp.centerY)
-            make.width.equalTo(probabilityTextField.snp.width)
+//            make.width.equalTo(probabilityTextField.snp.width)
         }
         probabilityTitleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(autoSize(number: 10))
@@ -78,7 +78,7 @@ class ZLItemViewCell: UITableViewCell {
         }
         probabilityTextField.snp.makeConstraints { (make) in
             make.left.equalTo(probabilityTitleLabel.snp.right).offset(autoSize(number: 10))
-            make.right.lessThanOrEqualTo(polishingBtn.snp.left).offset(autoSize(number: -20))
+            make.right.equalTo(polishingBtn.snp.left).offset(autoSize(number: -5))
             make.centerY.equalTo(probabilityTitleLabel.snp.centerY)
         }
         polishingBtn.snp.makeConstraints { (make) in

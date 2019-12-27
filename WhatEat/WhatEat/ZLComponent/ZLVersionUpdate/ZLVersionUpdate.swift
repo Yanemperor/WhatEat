@@ -15,7 +15,7 @@ import SwiftyJSON
 // 1484750167 正式
 class ZLVersionUpdate: NSObject {
     static var shared = ZLVersionUpdate()
-    let appleID: String  = "1484750167"
+    let appleID: String  = "1491874274"
     
     func updateVersion() {
         Alamofire.request("https://itunes.apple.com/cn/lookup?id=" + appleID, method: .post, parameters: [:])
