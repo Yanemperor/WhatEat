@@ -29,10 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
 //        Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle")?.load()
         #else
-        setBugly()
+//        setBugly()
         #endif
         // 版本更新
-//        updateApp()
+        updateApp()
         return true
     }
     

@@ -32,8 +32,8 @@ class ZLSetViewController: ZLBaseTableViewController {
     
     // MARK: - private methods(内部接口)
     func shareAction() {
-        let url = "https://apps.apple.com/cn/app/%E6%88%90%E8%80%83%E5%AE%9D%E5%85%B8/id1484750167"
-        ZLSystemShare.manager.share(shreVC: self, title: "成考宝典", shareUrl: URL(string: url))
+        let url = "https://apps.apple.com/cn/app/%E6%88%90%E8%80%83%E5%AE%9D%E5%85%B8/id1491874274"
+        ZLSystemShare.manager.share(shreVC: self, title: "吃啥呀？", shareUrl: URL(string: url))
     }
     
     // MARK: - loading
