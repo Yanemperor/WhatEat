@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "完成"
         initAdvertising()
-//        loadAdTimer()
+        loadAdTimer()
         ZLDataBase.shared.createDB()
         #if DEBUG
 //        Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle")?.load()

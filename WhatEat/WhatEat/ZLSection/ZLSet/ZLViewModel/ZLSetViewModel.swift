@@ -9,5 +9,5 @@
 import UIKit
 
 class ZLSetViewModel: ZLBaseViewModel {
-    lazy var titles: Array<String> = ["给个评分","分享","推荐","关于我"]
+    lazy var titles: Array<Array<String>> = [["声音","震动"],["给个评分","分享","推荐","关于我"]]
 }

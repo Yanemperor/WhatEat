@@ -115,9 +115,12 @@ class ZLHomeViewController: ZLBaseViewController {
         temp.dataSource = vm.circularModel?.items ?? []
         temp.drawPieChartView()
         temp.resultBlock = { item in
-            let feedbackGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: UIImpactFeedbackGenerator.FeedbackStyle.heavy)
-            feedbackGenerator.prepare()
-            feedbackGenerator.impactOccurred()
+            let isVibration: Bool = UserDefaults.standard.object(forKey: ZLUserDefaultsKey.vibrationName) as? Bool ?? true
+            if isVibration {
+                let feedbackGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: UIImpactFeedbackGenerator.FeedbackStyle.heavy)
+                feedbackGenerator.prepare()
+                feedbackGenerator.impactOccurred()
+            }
             self.resultView.setCircularItemModel(model: item)
         }
         return temp

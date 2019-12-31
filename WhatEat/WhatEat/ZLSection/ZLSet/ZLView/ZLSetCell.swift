@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ZLSetCell: UITableViewCell {
+
 
     func setTitle(title: String) {
         titleLabel.text = title
@@ -22,6 +25,7 @@ class ZLSetCell: UITableViewCell {
     func initUI() {
         contentView.addSubview(bgView)
         bgView.addSubview(titleLabel)
+        bgView.addSubview(rightSwitch)
         bgView.snp.makeConstraints { (make) in
             make.left.top.equalToSuperview().offset(autoSize(number: 10))
             make.bottom.right.equalToSuperview().offset(autoSize(number: -10))
@@ -30,6 +34,10 @@ class ZLSetCell: UITableViewCell {
             make.left.equalToSuperview().offset(autoSize(number: 15))
             make.top.equalToSuperview().offset(autoSize(number: 10))
             make.bottom.equalToSuperview().offset(autoSize(number: -10))
+        }
+        rightSwitch.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().offset(autoSize(number: -15))
+            make.centerY.equalToSuperview()
         }
     }
     
@@ -49,6 +57,13 @@ class ZLSetCell: UITableViewCell {
         temp.textColor = color_333333
         temp.textAlignment = .left
         temp.font = autoFont(font: 16)
+        return temp
+    }()
+    
+    lazy var rightSwitch: UISwitch = {
+        let temp = UISwitch()
+        temp.isHidden = true
+        
         return temp
     }()
     

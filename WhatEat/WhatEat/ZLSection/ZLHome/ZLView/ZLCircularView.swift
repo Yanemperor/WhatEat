@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import AVFoundation
 
 class ZLCircularView: UIView {
 
@@ -41,11 +42,13 @@ class ZLCircularView: UIView {
     func drawPieChartView() {
         
         radius = frame.size.height / 2.0
+        let width = (radius + radius * 1.5) * sqrt(2)
+        let height = width
         baseView.snp.updateConstraints { (make) in
             make.center.equalToSuperview()
-            make.size.equalTo(CGSize(width: (radius + radius * 1.5) * sqrt(2), height: (radius + radius * 1.5) * sqrt(2)))
+            make.size.equalTo(CGSize(width: width, height: height))
         }
-        baseView.layer.cornerRadius = (radius + radius * 1.5) * sqrt(2) / 2.0
+        baseView.layer.cornerRadius = width / 2.0
         centerPoint = CGPoint.init(x: frame.size.width/2.0, y: frame.size.height/2.0)
         if dataSource.count % 2 == 0{
             startAngle = Float(CGFloat.pi / 2.0) - 2 * .pi / Float(dataSource.count) / 2
@@ -192,6 +195,35 @@ class ZLCircularView: UIView {
         rotationAnim.delegate = self
         rotationAnim.isRemovedOnCompletion = false //默认是true，切换到其他控制器再回来，动画效果会消失，需要设置成false，动画就不会停了
         rotationView.layer.add(rotationAnim, forKey: nil) // 给需要旋转的view增加动画
+        let isVoice: Bool = UserDefaults.standard.object(forKey: ZLUserDefaultsKey.voiceName) as? Bool ?? true
+        if isVoice {
+            self.playMP3()
+        }
+    }
+    var audioPlayer: AVAudioPlayer = AVAudioPlayer()
+
+    func playMP3() {
+        let session = AVAudioSession.sharedInstance()
+        do{
+            try session.setActive(true)
+            try session.setCategory(AVAudioSession.Category.playback)
+            UIApplication.shared.beginReceivingRemoteControlEvents()
+            let path = Bundle.main.path(forResource: "rotary_rotating", ofType: "m4r")
+            let soudUrl = URL(fileURLWithPath: path!)
+            try audioPlayer = AVAudioPlayer(contentsOf: soudUrl, fileTypeHint: AVFileType.mp3.rawValue)
+            audioPlayer.prepareToPlay()
+            audioPlayer.volume = 1
+            audioPlayer.numberOfLoops = 1
+            audioPlayer.play()
+            //自定义10s后关闭播放
+            Timer.scheduledTimer(timeInterval: 3.8, target: self, selector: #selector(stopAudioPlayer), userInfo: nil, repeats: false)
+        } catch{
+            print(error)
+        }
+    }
+    
+    @objc func stopAudioPlayer() {
+            audioPlayer.stop()
     }
     
     init() {
@@ -249,8 +281,11 @@ class ZLCircularView: UIView {
         lazy var button: UIButton = {
             let temp = UIButton()
             temp.setBackgroundImage(UIImage(named: "circular_pointer"), for: .normal)
+            temp.setBackgroundImage(UIImage(named: "circular_pointer"), for: .highlighted)
             temp.setTitle("开始", for: .normal)
+            temp.setTitle("开始", for: .highlighted)
             temp.setTitleColor(color_333333, for: .normal)
+            temp.setTitleColor(color_333333, for: .highlighted)
             temp.titleLabel?.font = autoFont(font: 16)
             temp.layer.cornerRadius = 25
             temp.layer.masksToBounds = true
