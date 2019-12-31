@@ -15,9 +15,9 @@ struct GoogleMobileAds {
     static let incentiveID = "ca-app-pub-3940256099942544/1712485313"       // 谷歌激励广告
 
     #else
-    static let bannerID = "ca-app-pub-5371645744823288/3833586387"        // 谷歌横幅广告ID
+    static let bannerID = "ca-app-pub-3940256099942544/2934735716"        // 谷歌横幅广告ID
     static let interstitialID = ""        // 谷歌插页广告ID
-    static let incentiveID = "ca-app-pub-5371645744823288/8702769681"       // 谷歌激励广告
+    static let incentiveID = ""       // 谷歌激励广告
     #endif
 
 }
